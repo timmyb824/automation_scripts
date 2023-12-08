@@ -1,0 +1,59 @@
+probes:
+  - id: '1'
+    name: vm303 status
+    description: Check if vm303 is up
+    interval: 30 # in seconds
+    requests:
+      - url: vm303.local.lan
+        ping: true
+        alerts:
+          - assertion: response.status != 200
+            message: Status code is not 200
+          - assertion: response.time > 2000
+            message: Request took more than 2 seconds
+    incidentThreshold: 1
+    recoveryThreshold: 1
+    alerts:
+      - assertion: response.status != 200
+        message: vm303 is down
+
+  - id: 'homelab-db'
+    name: database health
+    description: ensure db health
+    interval: 60 # in seconds
+    incidentThreshold: 2
+    recoveryThreshold: 2
+    postgres:
+      - uri: postgresql://user:password@vm303.local.lan:5432/postgres
+    alerts:
+        - assertion: response.time > 10000
+          message: postgres response is slow, took {{ response.time }}ms
+
+  - id: c99509fb-5e10-48a6-83d5-5863a4b193ea
+    name: Zabbix Server
+    description: ''
+    interval: 60
+    requests:
+      - url: https://zabbix.timmybtech.com/
+        body: {}
+        timeout: 10000
+        headers: {}
+        method: GET
+        alerts: []
+    incidentThreshold: 5
+    recoveryThreshold: 5
+    alerts:
+      - assertion: response.status < 200 or response.status > 299
+        message: Target is not healthy. It has not been returning status code 2xx.
+      - assertion: response.time > 2000
+        message: >-
+          Target is not healthy. The response time has been greater than 2000
+          ms.
+
+notifications:
+  - id: desktop-notice
+    type: desktop
+  - id: slack-notice
+    type: slack
+    data:
+      url: https://slackwebhook.com/channel
