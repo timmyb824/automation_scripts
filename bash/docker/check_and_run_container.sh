@@ -1,8 +1,17 @@
 #!/bin/bash
 
-# Define the container name and directory path
+# Explicitly set your PATH
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Define the container name, directory path, and log file
 container_name="netdata"
 directory_path="/home/opc/netdata"
+log_file="/home/opc/scripts/check_and_run_container.log"
+
+# Logging function
+log() {
+  echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "$log_file"
+}
 
 # Function to check if docker-compose or docker compose is available
 check_docker_compose_command() {
@@ -19,22 +28,26 @@ check_docker_compose_command() {
   fi
 }
 
-# Change directory to where your docker-compose.yml file is located
-cd "$directory_path" || exit 1
+# Log the start of the script
+log "Checking if $container_name container is running."
 
 # Use the appropriate Docker Compose command
 compose_command=$(check_docker_compose_command)
 
 if [ -z "$compose_command" ]; then
-  echo "Neither docker-compose nor docker compose command is available."
+  log "Neither docker-compose nor docker compose command is available."
   exit 1
 fi
 
 # Check if the container is running
 if [ -z "$(docker ps -q -f name=^/${container_name}$)" ]; then
-  echo "The container is not running. Starting the container with $compose_command"
+  log "The container $container_name is not running. Starting the container with $compose_command."
   # Start the container with docker-compose if it's not running
-  $compose_command up -d --force-recreate
+  if $compose_command -f "$directory_path/docker-compose.yml" up -d --force-recreate >> "$log_file" 2>&1; then
+    log "The container $container_name has been started successfully."
+  else
+    log "Failed to start the container $container_name."
+  fi
 else
-    echo "The container is running. No need to start the container."
+  log "The container $container_name is already running. No need to start the container."
 fi
