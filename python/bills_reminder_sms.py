@@ -5,7 +5,7 @@ import sys
 from datetime import datetime, timedelta
 from email.message import EmailMessage
 
-# Set up logging
+# Set up logging to output to a file
 # logging.basicConfig(filename='/home/tbryant/logs/bills_reminder.log',
 #                     filemode='a',
 #                     format='%(asctime)s - %(levelname)s - %(message)s',
@@ -63,7 +63,7 @@ bills = {
     "Discover": 1,
     "Navient": 1,
     "CitiBank": 19,
-    "Mohela": 21,
+    "Mohela": 24,
     "CapitalOne": 27,
     "Vickies": 27,
 }
