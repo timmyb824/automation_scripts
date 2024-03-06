@@ -65,4 +65,6 @@ echo -e "############################################\n"
 
 # Delete old backups
 find $backupfolder -mtime +$keep_day -delete
+find $remote_backupfolder -mtime +$keep_day -delete
+
 curl -fsS -m 10 --retry 5 -o /dev/null $HEALTHCHECKS_URL_MYSQL
