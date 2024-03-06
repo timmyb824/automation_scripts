@@ -9,6 +9,9 @@ path=/home/tbryant
 # Backup storage directory
 backupfolder=$path/mysql_backup/backups
 
+# Remote backup storage directory
+remote_backupfolder=/mnt/bryantnas/mysql_backups
+
 # MySQL user
 user=$MYSQL_USER
 
@@ -45,6 +48,18 @@ fi
 rm $sqlfile
 echo -e "$(basename ${zipfile}) was created successfully"
 echo -e "--------------------------------------------\n"
+
+# Copy to remote backup location
+cp $zipfile $remote_backupfolder
+
+if [ $? == 0 ]; then
+  echo -e "Backup file copied to remote location successfully"
+  echo -e "--------------------------------------------\n"
+else
+  echo 'Error copying backup file to remote location'
+  exit
+fi
+
 echo -e "############################################"
 echo -e "############################################\n"
 
