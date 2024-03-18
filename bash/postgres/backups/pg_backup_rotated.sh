@@ -174,12 +174,32 @@ function perform_backups()
         echo -e "\nAll database backups complete!"
 }
 
+# Function to log messages with timestamps
+log() {
+    echo "$(date '+%Y-%m-%d %H:%M:%S') - $1"
+}
+
+# Function to send a signal to Healthchecks.io
+signal_healthchecks() {
+    local status=$1
+    curl -m 10 --retry 5 "${HEALTHCHECKS_URL}/${status}" >/dev/null 2>&1
+}
+
 # DAILY BACKUPS
 
 # Delete daily backups 3 days old or more
 find $BACKUP_DIR -maxdepth 1 -mtime +$DAYS_TO_KEEP -name "*-daily" -exec rm -rf '{}' ';'
 
-perform_backups "-daily"
+
+# perform backup
+if perform_backups "-daily"; then
+    log "Backups completed successfully."
+    signal_healthchecks 0
+else
+    log "Backups failed."
+    signal_healthchecks 1
+    exit 1
+fi
 
 
 # Copy backups to the NAS
@@ -190,10 +210,6 @@ if ! sudo rsync -az --progress $FINAL_BACKUP_DIR $NAS_DIR; then
 else
     echo "Backups successfully copied to the NAS"
 fi
-
-# Post to healthchecks
-curl -fsS -m 10 --retry 5 -o /dev/null $HEALTHCHECKS_URL_PG
-
 
 # WEEKLY BACKUPS
 

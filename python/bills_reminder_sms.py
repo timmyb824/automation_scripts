@@ -1,22 +1,27 @@
 import logging
 import os
+
+# import sys
 import smtplib
-import sys
 from datetime import datetime, timedelta
 from email.message import EmailMessage
 
-# Set up logging to output to a file
-# logging.basicConfig(filename='/home/tbryant/logs/bills_reminder.log',
-#                     filemode='a',
-#                     format='%(asctime)s - %(levelname)s - %(message)s',
-#                     level=logging.INFO)
+import requests
 
-# Set up logging to output to the terminal
+# Set up logging to output to a file
 logging.basicConfig(
-    stream=sys.stdout,
+    filename="/home/tbryant/logs/bills_reminder.log",
+    filemode="a",
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.INFO,
 )
+
+# Set up logging to output to the terminal
+# logging.basicConfig(
+#     stream=sys.stdout,
+#     format="%(asctime)s - %(levelname)s - %(message)s",
+#     level=logging.INFO,
+# )
 
 CARRIERS = {
     "att": "@mms.att.net",
@@ -28,6 +33,7 @@ CARRIERS = {
 EMAIL = os.environ.get("EMAIL")
 PASSWORD = os.environ.get("GOOGLE_APP_PASSWORD")
 PHONE_NUMBER = os.environ.get("PHONE_NUMBER")
+HEALTHCHECKS_URL = os.environ.get("HEALTHCHECKS_URL")
 
 
 def send_message(phone_number, carrier, subject, message):
@@ -49,8 +55,10 @@ def send_message(phone_number, carrier, subject, message):
         server.login(auth[0], auth[1])
         server.send_message(email_message)
         server.quit()
+        requests.get(HEALTHCHECKS_URL, timeout=10)
 
     except Exception as e:
+        requests.get(f"{HEALTHCHECKS_URL}/fail", timeout=10)
         logging.error(
             "Failed to send reminder for the following bill(s): %s. Exception: %s",
             subject,
@@ -80,3 +88,10 @@ if bills_due_tomorrow := [
     logging.info("Reminder sent for the following bill(s): %s", bills_list)
 else:
     logging.info("No bills due tomorrow.")
+    try:
+        requests.get(HEALTHCHECKS_URL, timeout=10)
+    except requests.RequestException as re:
+        logging.error(
+            "Failed to send health check signal when no bills are due. Exception: %s",
+            re,
+        )
