@@ -3,6 +3,8 @@
 # Explicitly set your PATH
 PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
+HEALTHCHECKS_URL=""
+
 # Define the container name, directory path, and log file
 container_name="netdata"
 directory_path="/home/opc/netdata"
@@ -12,6 +14,13 @@ log_file="/home/opc/scripts/check_and_run_container.log"
 log() {
   echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "$log_file"
 }
+
+# Function to send a signal to Healthchecks.io
+signal_healthchecks() {
+        local status=$1
+        curl -m 10 --retry 5 "${HEALTHCHECKS_URL}/${status}" >/dev/null 2>&1
+}
+
 
 # Function to check if docker-compose or docker compose is available
 check_docker_compose_command() {
@@ -36,6 +45,7 @@ compose_command=$(check_docker_compose_command)
 
 if [ -z "$compose_command" ]; then
   log "Neither docker-compose nor docker compose command is available."
+  send_signal 1
   exit 1
 fi
 
@@ -45,9 +55,12 @@ if [ -z "$(docker ps -q -f name=^/${container_name}$)" ]; then
   # Start the container with docker-compose if it's not running
   if $compose_command -f "$directory_path/docker-compose.yml" up -d --force-recreate >> "$log_file" 2>&1; then
     log "The container $container_name has been started successfully."
+    signal_healthchecks 0
   else
     log "Failed to start the container $container_name."
+    signal_healthchecks 1
   fi
 else
   log "The container $container_name is already running. No need to start the container."
+  signal_healthchecks 0
 fi
