@@ -64,9 +64,12 @@ perform_backup() {
         echo "--------------------------------------------"
 
         # Copy to remote backup location
-        cp "$zipfile" "$remote_backupfolder"
-        echo "Backup file copied to remote location successfully"
-        echo "--------------------------------------------"
+        if cp "$zipfile" "$remote_backupfolder"; then
+                echo "Backup copied to remote folder successfully"
+        else
+                echo "Failed to copy backup to remote folder"
+        fi
+
 
         # Delete old backups from local backup folder
         if find "$backupfolder" -mtime +"$keep_day" -print -delete | grep -q '.*'; then
