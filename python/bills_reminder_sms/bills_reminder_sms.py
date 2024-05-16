@@ -8,20 +8,12 @@ from email.message import EmailMessage
 
 import requests
 
-# Set up logging to output to a file
 logging.basicConfig(
-    filename="/home/tbryant/logs/bills_reminder.log",
-    filemode="a",
     format="%(asctime)s - %(levelname)s - %(message)s",
     level=logging.INFO,
 )
 
-# Set up logging to output to the terminal
-# logging.basicConfig(
-#     stream=sys.stdout,
-#     format="%(asctime)s - %(levelname)s - %(message)s",
-#     level=logging.INFO,
-# )
+logger = logging.getLogger(__name__)
 
 CARRIERS = {
     "att": "@mms.att.net",
@@ -33,7 +25,7 @@ CARRIERS = {
 EMAIL = os.environ.get("EMAIL")
 PASSWORD = os.environ.get("GOOGLE_APP_PASSWORD")
 PHONE_NUMBER = os.environ.get("PHONE_NUMBER")
-HEALTHCHECKS_URL = os.environ.get("HEALTHCHECKS_URL")
+HEALTHCHECKS_URL = os.environ.get("HEALTHCHECKS_URL_BILLS_REMINDER_SMS")
 
 
 def send_message(phone_number, carrier, subject, message):
@@ -84,7 +76,7 @@ if bills_due_tomorrow := [
     bills_list = ", ".join(bills_due_tomorrow)
     subject = "Bill Reminder: Bills Due"
     message = f"Reminder: Your {bills_list} bill(s) are due tomorrow, on {tomorrow.strftime('%Y-%m-%d')}. Don't forget to pay them on time!"
-    send_message(PHONE_NUMBER, "tmobile", subject, message)
+    # send_message(PHONE_NUMBER, "tmobile", subject, message)
     logging.info("Reminder sent for the following bill(s): %s", bills_list)
 else:
     logging.info("No bills due tomorrow.")
