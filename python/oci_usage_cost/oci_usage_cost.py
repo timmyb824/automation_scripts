@@ -1,4 +1,5 @@
 import datetime
+import logging
 import os
 
 import oci.usage_api.models
@@ -7,6 +8,13 @@ from gotify import Gotify
 from oci.usage_api.models import RequestSummarizedUsagesDetails
 from rocketry import Rocketry
 from rocketry.conds import every  # daily
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s %(message)s",
+)
+
+logger = logging.getLogger(__name__)
 
 app = Rocketry()
 
@@ -110,7 +118,7 @@ def send_gotify_notification(message) -> dict:
             extras={"client::display": {"contentType": "text/markdown"}},
         )
     except Exception as exception:
-        print(exception)
+        logger.error(f"Failed to send Gotify notification. Exception: {exception}")
         return {}
 
 
@@ -126,7 +134,7 @@ def send_discord_notification(message) -> dict:
         response.raise_for_status()
         return {"ok": True, "status": response.status_code}
     except Exception as exception:
-        print(exception)
+        logger.error(f"Failed to send Discord notification. Exception: {exception}")
         return {"ok": False, "status": "Failed"}
 
 
@@ -141,7 +149,7 @@ def send_ntfy_notification(message) -> dict:
         response.raise_for_status()
         return {"ok": True, "status": response.status_code}
     except Exception as exception:
-        print(exception)
+        logger.error(f"Failed to send Ntfy notification. Exception: {exception}")
         return {"ok": False, "status": "Failed"}
 
 
@@ -169,7 +177,7 @@ def check_threshold_exceeded(total_computed_amount: float) -> bool:
             print("###############################################\n")
             return True
         else:
-            print("Failed to send Slack and Gotify notifications.\n")
+            logger.error("Failed to send notifications.\n")
             return False
 
 
@@ -202,7 +210,7 @@ def main() -> None:
     try:
         requests.get(HEALTHCHECKS_URL, timeout=10)
     except requests.RequestException as re:
-        print(f"Failed to send health check signal. Exception: {re}\n")
+        logger.error(f"Failed to send health check signal. Exception: {re}\n")
     return
 
 
