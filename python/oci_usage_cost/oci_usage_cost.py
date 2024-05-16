@@ -6,22 +6,28 @@ import requests
 from gotify import Gotify
 from oci.usage_api.models import RequestSummarizedUsagesDetails
 from rocketry import Rocketry
-from rocketry.conds import daily, every
-from slack_sdk import WebClient
+from rocketry.conds import every  # daily
 
 app = Rocketry()
 
 DISCORD_WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
 HEALTHCHECKS_URL = os.environ["HEALTHCHECKS_URL_OCI_USAGE_COST"]
-SLACK_BOT_TOKEN = os.environ["SLACK_BOT_TOKEN"]
 THRESHOLD = 5
 GOTIFY = Gotify(
     base_url=os.environ["GOTIFY_HOST"],
     app_token=os.environ["GOTIFY_TOKEN_ADHOC_SCRIPTS"],
 )
+NTFY_TOPIC = os.environ["NTFY_TOPIC"]
+NTFY_ACCESS_TOKEN = os.environ["NTFY_ACCESS_TOKEN"]
+NTFY_URL = f"https://ntfy.timmybtech.com/{NTFY_TOPIC}"
 
-# Load the config file
-config = oci.config.from_file("~/.oci/config")
+CONFIG_PATH = os.path.expanduser("~/.oci/config")
+if not os.path.exists(CONFIG_PATH):
+    CONFIG_PATH = "/scripts/config"
+    if not os.path.exists(CONFIG_PATH):
+        raise FileNotFoundError("OCI config file not found")
+
+config = oci.config.from_file(CONFIG_PATH)
 
 # Create a usage api client
 usage_api_client = oci.usage_api.UsageapiClient(config)
@@ -95,12 +101,6 @@ def get_usage_totals_by_service() -> tuple:
     return (total_computed_amounts_by_service, total_computed_quantities_by_service)
 
 
-def send_slack_notification(message) -> dict:
-    client = WebClient(token=SLACK_BOT_TOKEN)
-
-    return client.chat_postMessage(channel="#alerts", text=message)
-
-
 def send_gotify_notification(message) -> dict:
     try:
         return GOTIFY.create_message(
@@ -120,7 +120,23 @@ def send_discord_notification(message) -> dict:
 
     try:
         response = requests.post(
-            DISCORD_WEBHOOK_URL, json=data, headers=headers, timeout=5
+            DISCORD_WEBHOOK_URL, json=data, headers=headers, timeout=15
+        )
+        headers = {"Authorization": f"Basic {NTFY_ACCESS_TOKEN}"}
+        response.raise_for_status()
+        return {"ok": True, "status": response.status_code}
+    except Exception as exception:
+        print(exception)
+        return {"ok": False, "status": "Failed"}
+
+
+def send_ntfy_notification(message) -> dict:
+    try:
+        response = requests.post(
+            NTFY_URL,
+            headers={"Authorization": f"Bearer {NTFY_ACCESS_TOKEN}"},
+            data=message,
+            timeout=15,
         )
         response.raise_for_status()
         return {"ok": True, "status": response.status_code}
@@ -133,11 +149,11 @@ def check_threshold_exceeded(total_computed_amount: float) -> bool:
     # sourcery skip: extract-duplicate-method, last-if-guard
     if total_computed_amount > THRESHOLD:
         message = f"ATTENTION! OCI costs of {total_computed_amount:.2f} USD exceeds {THRESHOLD} USD!"
-        # slack_response = send_slack_notification(message)
         discord_response = send_discord_notification(message)
         gotify_response = send_gotify_notification(message)
-        if discord_response["ok"] and gotify_response["id"]:
-            print("\nDiscord and Gotify notifications sent successfully.\n")
+        ntfy_response = send_ntfy_notification(message)
+        if discord_response["ok"] and gotify_response["id"] and ntfy_response["ok"]:
+            print("\nDiscord, Gotify, and Ntfy notifications sent successfully.\n")
             print("###############################################\n")
             return True
         elif discord_response["ok"]:
@@ -146,6 +162,10 @@ def check_threshold_exceeded(total_computed_amount: float) -> bool:
             return True
         elif gotify_response["id"]:
             print("\nGotify notification sent successfully.\n")
+            print("###############################################\n")
+            return True
+        elif ntfy_response["ok"]:
+            print("\nNtfy notification sent successfully.\n")
             print("###############################################\n")
             return True
         else:
