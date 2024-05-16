@@ -5,8 +5,13 @@ import os
 import smtplib
 from datetime import datetime, timedelta
 from email.message import EmailMessage
-
 import requests
+
+from rocketry import Rocketry
+from rocketry.conds import every  # daily, hourly,
+
+app = Rocketry()
+
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -58,32 +63,39 @@ def send_message(phone_number, carrier, subject, message):
         )
 
 
-# List of bills with the day of the month they are due
-bills = {
-    "Discover": 1,
-    "Navient": 1,
-    "CitiBank": 19,
-    "Mohela": 24,
-    "CapitalOne": 27,
-    "Vickies": 27,
-}
+# @app.task(daily.at("22:30"))
+# @app.task(every("24 hours"))
+@app.task(every("1 minutes"))
+def main():
+    # List of bills with the day of the month they are due
+    bills = {
+        "Discover": 1,
+        "Navient": 1,
+        "CitiBank": 19,
+        "Mohela": 24,
+        "CapitalOne": 27,
+        "Vickies": 27,
+    }
 
-# Check if any bill is due tomorrow
-tomorrow = (datetime.now() + timedelta(days=1)).date()
-if bills_due_tomorrow := [
-    bill_name for bill_name, due_day in bills.items() if due_day == tomorrow.day
-]:
-    bills_list = ", ".join(bills_due_tomorrow)
-    subject = "Bill Reminder: Bills Due"
-    message = f"Reminder: Your {bills_list} bill(s) are due tomorrow, on {tomorrow.strftime('%Y-%m-%d')}. Don't forget to pay them on time!"
-    # send_message(PHONE_NUMBER, "tmobile", subject, message)
-    logging.info("Reminder sent for the following bill(s): %s", bills_list)
-else:
-    logging.info("No bills due tomorrow.")
-    try:
-        requests.get(HEALTHCHECKS_URL, timeout=10)
-    except requests.RequestException as re:
-        logging.error(
-            "Failed to send health check signal when no bills are due. Exception: %s",
-            re,
-        )
+    # Check if any bill is due tomorrow
+    tomorrow = (datetime.now() + timedelta(days=1)).date()
+    if bills_due_tomorrow := [
+        bill_name for bill_name, due_day in bills.items() if due_day == tomorrow.day
+    ]:
+        bills_list = ", ".join(bills_due_tomorrow)
+        subject = "Bill Reminder: Bills Due"
+        message = f"Reminder: Your {bills_list} bill(s) are due tomorrow, on {tomorrow.strftime('%Y-%m-%d')}. Don't forget to pay them on time!"
+        send_message(PHONE_NUMBER, "tmobile", subject, message)
+        logging.info("Reminder sent for the following bill(s): %s", bills_list)
+    else:
+        logging.info("No bills due tomorrow.")
+        try:
+            requests.get(HEALTHCHECKS_URL, timeout=10)
+        except requests.RequestException as re:
+            logging.error(
+                "Failed to send health check signal when no bills are due. Exception: %s",
+                re,
+            )
+
+if __name__ == "__main__":
+    app.run()
