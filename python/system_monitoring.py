@@ -6,6 +6,7 @@ cpu_usage = psutil.cpu_percent()
 
 # Get the current memory usage
 memory_usage = psutil.virtual_memory().percent
+swap_usage = psutil.swap_memory().percent
 
 # Get the current disk usage
 disk_usage = psutil.disk_usage("/").percent
@@ -18,7 +19,7 @@ for interface, counters in io_counters.items():
     print(f"  bytes sent: {counters.bytes_sent}")
     print(f"  bytes received: {counters.bytes_recv}")
 
-# Get a list of active connections
+# Get a list of active connections (may need to run with sudo for this to work)
 connections = psutil.net_connections()
 for connection in connections:
     print(f"{connection.laddr} <-> {connection.raddr} ({connection.status})")
@@ -26,4 +27,5 @@ for connection in connections:
 # Print the collected data
 print(f"CPU usage: {cpu_usage}%")
 print(f"Memory usage: {memory_usage}%")
+print(f"Swap usage: {swap_usage}%")
 print(f"Disk usage: {disk_usage}%")
