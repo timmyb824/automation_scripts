@@ -6,6 +6,8 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY aws_usage_cost.py .
 
-CMD ["python"]
+ENV PYTHONUNBUFFERED=1
+
+CMD ["python", "aws_usage_cost.py"]

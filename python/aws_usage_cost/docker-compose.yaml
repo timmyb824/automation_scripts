@@ -1,0 +1,15 @@
+---
+services:
+  scripts:
+    container_name: aws_usage_cost
+    # image: aws_usage_cost
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - GOTIFY_HOST=${GOTIFY_HOST}
+      - GOTIFY_TOKEN_ADHOC_SCRIPTS="${GOTIFY_TOKEN_ADHOC_SCRIPTS}"
+      - SLACK_BOT_TOKEN=${SLACK_BOT_TOKEN}
+      - HEALTHCHECKS_URL_AWS_USAGE_COST=${HEALTHCHECKS_URL_AWS_USAGE_COST}
+      - DISCORD_WEBHOOK_URL=${DISCORD_WEBHOOK_URL}
+    network_mode: host
