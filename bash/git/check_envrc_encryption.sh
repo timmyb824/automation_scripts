@@ -1,4 +1,4 @@
-#!/Users/timothybryant/.local/bin/bash
+#!/usr/bin/env bash
 
 # Path to your .envrc file
 ENVRC_PATH="$HOME/DEV/homelab/automation_scripts/.envrc"
