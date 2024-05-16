@@ -1,498 +1,499 @@
+#ENC[AES256_GCM,data:Vn1VhmgApbc847+fo+HsMeZbrOwQwA==,iv:9SIC0w7CxRJmd18lrHOp4tAHDujBMyzvXB+Kew4e8cQ=,tag:ZCNxVfKTr6cdacpLzPlXxg==,type:comment]
 notifications:
-    - id: gotify-notice
-      type: gotify
+    - id: ENC[AES256_GCM,data:yyj3Gr3JNOmpwvpriQ==,iv:kQEJD02KZiuVlaJUMDEi5qlIZYFs1UhhCQh1yZU4xfI=,tag:7bdafLuKMEe7jtAbHAcISA==,type:str]
+      type: ENC[AES256_GCM,data:Lp8uU1K3,iv:EdmRTKJT7wBrCvcFW2vanXmxjGt6FlVBnVBypz1y9C4=,tag:twfBm9S8GMpRH66OmjBSKg==,type:str]
       data:
-        url: ENC[AES256_GCM,data:7wESRrU6rkDZ/muSAmg/IfzF4ppEMjHrwSKtrpE=,iv:6dBtlf3YF8akoOw9vRefuwZ7A+8E7LeNfeUTaoNwTvc=,tag:HA2F2thfpDcnSOgnm/8zYQ==,type:str]
-        token: ENC[AES256_GCM,data:CAcftnkwbmn6qTGTY4EQ,iv:tKIn52aR+UzMc5NMA6a1Inyoia4i1/wLjbpMs+ILWJc=,tag:kPzI7zUHyAG+Zr7ZPECnOg==,type:str]
-    - id: discord
-      type: discord
+        url: ENC[AES256_GCM,data:iAwxjshzjHTMhkchZ373cSsoYd5Ll3+c0d7yQc0=,iv:cX77mAZWKEo5wyTn4h+iux/4mzQD1Fi4aCr8cHJBZ+4=,tag:OyY3judKiCoUwGgu8kt15g==,type:str]
+        token: ENC[AES256_GCM,data:ahUx8i/480Bc5Yo3/MPE,iv:SpDeJlIQV5zcjkvQYFuOlgk9fs0JcribzCKFk7OiClU=,tag:zUl2Ov+p/xIR1spHzN1fgw==,type:str]
+    - id: ENC[AES256_GCM,data:LFcarKLydg==,iv:lEAexyuaut1nkPhf2V/r77i3OFRdadkEVWMwAXIlukw=,tag:ghQ+iZE2A1YmibKkRfrMfw==,type:str]
+      type: ENC[AES256_GCM,data:q2a4544a4g==,iv:aIkMzVpLYzWWF71qvvQO0/i0rcGtEYV88lejf9+DK9g=,tag:C39EeKmnFSfwFAYAmtjteA==,type:str]
       data:
-        url: ENC[AES256_GCM,data:LYNQt+rbZCljQvxTKVZTh1EAWtSp3X0xlvscJ8xp3NoL8Gg2cErGbXE8qk2vEonABt85dAxsenj3TsmxItay1qBdHNEe0pSBTf9xwYJXSTrGOCEeQwH7vG5oNykNF0lKvwkOA3Wkcrs+T/3MpgFSGHpHQ2IwZIE/aQ==,iv:BdrFf3CTmXfHxiM2Zxmx1NOdFugnvskywKtu1bOJJrE=,tag:3uMdALuyEfUx/GXp/ym2Bg==,type:str]
+        url: ENC[AES256_GCM,data:KBpuo/iYcc8xyvan8HvqjbCCgyeUyqg8d3ol8SoU0NGDtZ6X3w/sFLsGv7leO0wC9VuZEm1HE4EfIm/o2FSQat3ObR5ppK1w7QsOc/iEomt8y5gqO3pUy38tkmLCHKS2tbow1qEDX3NBsjcsd5PD8KvfQ79125xYYA==,iv:0J6XcurIh9nq+8/fvjYhzLHicb4RO9xaRrHqkTUeOeA=,tag:nihEg/sHKbMHQ6+iu+E17A==,type:str]
 probes:
-    - id: "1"
-      name: Adguardhome
+    - id: ENC[AES256_GCM,data:Gg==,iv:YOV7j8ti93rAkS1a6dU1xlzIKwlP5PowyQ25QfkRZ1s=,tag:FaKzKF+UOx7hQ2q2I/Gb1Q==,type:str]
+      name: ENC[AES256_GCM,data:SXt7v0j/m96x4CA=,iv:iHSDOeP0RkYVqiOJwBSTzfs7zT3AlryzVhNdjwD1pR8=,tag:X5odyWs0PFCRQl+HOC4Rtw==,type:str]
       description: ""
-      interval: 60
+      interval: ENC[AES256_GCM,data:sus=,iv:JWe6lREuCWZ0EX30Y0WOSYQtPzASB/3FQOluTfvqKFA=,tag:MuftHBVHBh+eCw/1iTnVJQ==,type:int]
       requests:
-        - url: https://adguard.timmybtech.com
+        - url: ENC[AES256_GCM,data:1iiKaKbzdlu2jgQ+FIFDzdDVllmXys39vpTNTycn,iv:A0ch5PzMu34x61FzUq3E+Bn7X2Ah2gCav4PngjQ8qS8=,tag:cqBIv+gNHcjvGfgi/7j3bA==,type:str]
           body: {}
-          timeout: 10000
+          timeout: ENC[AES256_GCM,data:e1EJNOo=,iv:zkDmm6e0YkBCUybuS1YAczQWT9lWMgxpNcgLgj7qrWk=,tag:KmgB18Sn25jBen82WEbo8w==,type:int]
           headers: {}
-          method: GET
+          method: ENC[AES256_GCM,data:0kDT,iv:lqPxVf+8ZFAZ3HC5EWB5HCwwP4CnRvGHDrSKqLF8Eoo=,tag:qxRiob9EINc+XMJIr5fNSQ==,type:str]
           alerts: []
-      incidentThreshold: 10
-      recoveryThreshold: 10
+      incidentThreshold: ENC[AES256_GCM,data:VMU=,iv:DQbxxDUfQsNzKP5usjGjNBodfwIKSrl1GDxREOD4Av8=,tag:maB226/VgFqObzESpEbI5w==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:Ekw=,iv:ctpAKTdlQwsfi3KN4Y6WCQyDWiX2Gx85pwiE7zy2jOI=,tag:WP94dKVL97fuQoSz01lXcQ==,type:int]
       alerts:
-        - assertion: response.status < 200 or response.status > 299
-          message: Target is not healthy. It has not been returning status code 2xx.
-        - assertion: response.time > 2000
-          message: Target is not healthy. The response time has been greater than 2000 ms.
-    - id: "2"
-      name: Adguardhome Replica
+        - assertion: ENC[AES256_GCM,data:rX80p/3JoXl8znzFHwTArNd0DSHx+034ODvvT6SzOmozVt7B/taMfLiSS+T88g==,iv:EXceEe5jgoqdGS/DgVaF+hsarPaAOgt4gSpLWuzPGwQ=,tag:jzpwxlTpCr46lbu/KTAlmg==,type:str]
+          message: ENC[AES256_GCM,data:eomcyNo7RcIx8eyyf9cW8NbDK6ZHk1NjQRtvAubQTRuj9QhvrUSrsK90Ia+HMpSpiv2JOtYBUAK7YDsggZOvGq0=,iv:B2ghZhKzHhgWGZvgguv9tnLXuOJ0ooOnYbOxkx8m+xo=,tag:qQfmLP9IuP/snql9fYZlGA==,type:str]
+        - assertion: ENC[AES256_GCM,data:LvPxcehj1fOoh6KZVfW4Rws2GbM=,iv:HMLaIWmRij0xBw6dsQ4yaRQYUyCxzjsJHzrbWeFACXE=,tag:+Q7xm8yex9yu2uoQ6d2mrA==,type:str]
+          message: ENC[AES256_GCM,data:Uqb+ES5lTCqJT/8onYm+hRhPbPL2O/MzQmcYrNDlwMlb4Fc2ZCAeR0fzXl7nafLnpCEORn+nDZ+Cm2NoftchkD3JyxJvw9Q=,iv:w+OhNZcC9a4MNWyulpSXVR/RC+7NTV2wrq1CH5qkXRk=,tag:KyAuMtS0MnH5Eql3b/BqPw==,type:str]
+    - id: ENC[AES256_GCM,data:9A==,iv:FtiAMcbbFf5pin1cf3axMPo8MtZk/rvsa7D5dhtKm9Y=,tag:1p7K7IAwVyABy0ALzdD1Iw==,type:str]
+      name: ENC[AES256_GCM,data:K1TIQqqBjaKpv33vYwVYfJSPUg==,iv:vLnfeMo2+l/wR9ykcJckkrjcHuHWWGk9cYysy/1ei3I=,tag:RQCmzQvGbqjNgVpXyQUukQ==,type:str]
       description: ""
-      interval: 60
+      interval: ENC[AES256_GCM,data:+WU=,iv:FLwhump+l1fa9bcYzY7B6nwckZ7CWfyyW68jQeTbprk=,tag:Ny2M6ztgZGQ/14tWfZOFcw==,type:int]
       requests:
-        - url: https://adguard2.timmybtech.com
+        - url: ENC[AES256_GCM,data:r1TJ5j5nWMSutC8MYvt9j0bYhC0J7a/f+HXRos6Aiw==,iv:Urch56uSmKlvVjrmCRqJCX4nlLIx3NgaBbUS1lKfqV0=,tag:t84bs/E9r+mnktweTa4wZA==,type:str]
           body: {}
-          timeout: 10000
+          timeout: ENC[AES256_GCM,data:dxLRPMU=,iv:P+tsJYm2lRsqQ/PLBPj7m30MOuTOIa/SqWuiSJPNAn8=,tag:PboviYwJ2POTLYAxrEzrRg==,type:int]
           headers: {}
-          method: GET
+          method: ENC[AES256_GCM,data:/PO4,iv:1niEikTy9RMO57+2mCSdA9F8gsHqsjevuShfS7n/KMs=,tag:R/SZKg1zONmtkOq8XqPxoQ==,type:str]
           alerts: []
-      incidentThreshold: 10
-      recoveryThreshold: 10
+      incidentThreshold: ENC[AES256_GCM,data:5i4=,iv:APcSb3WZGRlDXBPGyYvqjjDb82ZPmdMVAVcUsAip5MM=,tag:e6bhQ4Qj9LychXm94/FDSg==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:UJ4=,iv:TGEV9kjWsaApwWo5zNZeHl8J2VOaNk3AdDz2f1oIqWA=,tag:8/hBRQHgfa2JnDxRpeutAQ==,type:int]
       alerts:
-        - assertion: response.status < 200 or response.status > 299
-          message: Target is not healthy. It has not been returning status code 2xx.
-        - assertion: response.time > 2000
-          message: Target is not healthy. The response time has been greater than 2000 ms.
-    - id: "3"
-      name: blog.timothybryantjr
+        - assertion: ENC[AES256_GCM,data:hBlDPq5r0zNfeS4QrzXRBPeka+BqMMJ4PUXc3YTbr4q7iOrVfExdLBd7yl/QEQ==,iv:yIUfNvbEyoSYbR3Hl+dHBhN148ZlRl9hOUSuVMuJNNI=,tag:BlwQMIgBctIpxPs0P+tQiQ==,type:str]
+          message: ENC[AES256_GCM,data:VRazE1Vzo7t+z4m+i9wGPMMkl8hQ4TRx/4FEZdRaHlcfEfoJ0mzMmtvtLkWi5hQblNzIrvUBclmZPjL41hiajq8=,iv:8YtwStTMR8626QlAPTnVZvRv0w10PpZprIZHVd5TMp4=,tag:VbU9OzegRBb05XK9wS8sxg==,type:str]
+        - assertion: ENC[AES256_GCM,data:HNQQoC6GsC+2r74SRmKmyU02KSA=,iv:I4CAjylKmGXi2xiECzZzjdHxTeoB6Ri89Yhu+cch2yc=,tag:nieIWINK1wtg2ymUtjj4/g==,type:str]
+          message: ENC[AES256_GCM,data:AZPCYZUKU+9jjOou9Wk8ZVOHhFVxpd+jNFbEb64U2nIGTQurKaExkBj6MUiAjWatORCmqk+3BmgbZxjJhGb8v8z6IiS+bUw=,iv:vZE4AfHlGmtz/PsG2iMitEvzTmiC7HXkhlFBWnJWJgg=,tag:kVIAVyEpFSTag8OV4k3zjg==,type:str]
+    - id: ENC[AES256_GCM,data:wg==,iv:khYci0qBiXCsh6g6bmSCzi2mMMDEsKFnV6bbZVW9zDQ=,tag:KrtasJvH5qC6rjB56qVN+A==,type:str]
+      name: ENC[AES256_GCM,data:6tmcabbGyXnq8+U6fD0I6T40BsQ=,iv:eJJHZn53PGF+FuYunQ72lEJHd6oZgzyZmzowubimk8w=,tag:H5fdbyT4C8UtmfTlLf715g==,type:str]
       description: ""
-      interval: 60
+      interval: ENC[AES256_GCM,data:YQY=,iv:77vLGSxN3hVjP5rAW+62vmCD1EXZbaYNtMgStC8YecA=,tag:k4/Pc+vq+ndmdzLVyVmz6g==,type:int]
       requests:
-        - url: https://blog.timothybryantjr.com
+        - url: ENC[AES256_GCM,data:hzU2lDjfoppiOTOFkhgn6kGt96WnMMgEPu2zumT4u1k=,iv:n/yW5lntIRE2A+qRcW/RTogI7OvK5MgNMZX6fKPsmrA=,tag:rP0rOilmX8YUvX4tbxS0zw==,type:str]
           body: {}
-          timeout: 10000
+          timeout: ENC[AES256_GCM,data:c485Alg=,iv:Wmv9OVRKuAGpcp2y1prcc4F/lNxax+hzliY523x15g0=,tag:xrgqJ6BSW6wwkMpSlyCC5A==,type:int]
           headers: {}
-          method: GET
+          method: ENC[AES256_GCM,data:jM+P,iv:b8qFWCZVhCRBa2AWYoE3zRKToLyE8WKmfTOREos7rWE=,tag:MrklCBtijm6N0mfvHkExZA==,type:str]
           alerts: []
-      incidentThreshold: 10
-      recoveryThreshold: 10
+      incidentThreshold: ENC[AES256_GCM,data:Azc=,iv:NtbcNcOM9nnTq4UWEULt8cl5tPteRk6fb30VxlspYz8=,tag:4S693F1fDbRjoa/LsEy5xQ==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:PAQ=,iv:UyEBgdwUxPlrmwNz3E8SKVk/rWwaWj9QpjYxwetOsJc=,tag:33uHXpj5fTZWjxfgB/g0IQ==,type:int]
       alerts:
-        - assertion: response.status < 200 or response.status > 299
-          message: Target is not healthy. It has not been returning status code 2xx.
-        - assertion: response.time > 2000
-          message: Target is not healthy. The response time has been greater than 2000 ms.
-    - id: "4"
-      name: bryantnas
-      description: Check if bryantnas is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:6lOcgIJW/48OCYir5YeaLZ+YSTzqbFYLsGz2VdXvpMWa/J2vUhU5wHKQfyIJEQ==,iv:OthtQgyEwAetWoIsIIY3T3eRgqBXuwsTgkAzlXo0TtY=,tag:p/kfGoSgT+KqUx5fDEiUKA==,type:str]
+          message: ENC[AES256_GCM,data:7YTe7+zKChuUaIjmrD6Hc71pc6EAQ4bmdxk72HMVrH213ARstlXw6PKW03SgdCDQRqyk6BfiaCXctARxifvwCNg=,iv:HQCwXEH0h/nlaFV201JyEfeQ6UUCXb5dYtHhpFA4gf4=,tag:Z2KbRvVeWAj4QogZkyzA6Q==,type:str]
+        - assertion: ENC[AES256_GCM,data:IZMpmFjPfoNYVBSkHXRYBdAXz+8=,iv:80rAQjsfmyP5gaqVGYK4agqBUUGZa1JtjIru7yTSrqk=,tag:cpZgbsg/WemTa8IEap+RMg==,type:str]
+          message: ENC[AES256_GCM,data:a7sC6aqHHpxytCaTmfpdnPLNAdxoyd2ztHEbpy68jioXsASZDKXX7q/2rW9Q6Z5K7jaSzBABJ9nrf0iFaRF8q8fF0y5wnNw=,iv:xaMbFHiVHppb9kPjWyWgqxw/jG6P/5KltTNpRXovuNU=,tag:KjTOJM7QynXGQUivL1A8OQ==,type:str]
+    - id: ENC[AES256_GCM,data:UA==,iv:RnEjIyBu+ISk9/AggShaEsoaFC+ARif7w92AI829MyY=,tag:w2DUDzwXzNoJVFBZIhCOqQ==,type:str]
+      name: ENC[AES256_GCM,data:mkTnEXIdYXXa,iv:veDjE3p/udAKZ82hpjNfUbn0WXmF3yQ8Vhsdy3butgA=,tag:5x2lVVwW4BZGDOJx977Njg==,type:str]
+      description: ENC[AES256_GCM,data:q0cH2SSDwxYkCnWL6hFMIkFS4nKis0PK,iv:0Jpu0j2db+OjzTWfSvpWC2/XQeW2iQnajul/eFANuo4=,tag:tL7zu3r4eTCksjtEdbtnPQ==,type:str]
+      interval: ENC[AES256_GCM,data:2ow=,iv:UXlGBm6OT59ExaQx1jlj52iR3BdpvWYh90Tk2daybGI=,tag:IBO7kdibuo8CLqI+Gj1YlA==,type:int]
       requests:
-        - url: nas.timmybtech.com
-          ping: true
+        - url: ENC[AES256_GCM,data:kZbRC/h3WNRh7FQSMbMdhjaZ,iv:hrCZEOF61sumFAxeX3mM6m4QIq+9Ko62/3A24jzb8Xo=,tag:0Za+lzA4v5rrDUkjIU1DRw==,type:str]
+          ping: ENC[AES256_GCM,data:NXQq3Q==,iv:69ogykqcFMjdDR0PK5cLiB5x31VObpw66fcRpRf4X+U=,tag:PApFMVuYM2MOBeUrMZ9gDw==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:3o/41Pj6lPS7bQpQRitSOY+sy2MKZw==,iv:JzHs8bBL5zswsR67Q7GC/RSGS978UIKa+2bIZ8g2HVU=,tag:E1lmcYXGYpwrmK3OR2KB0Q==,type:str]
+              message: ENC[AES256_GCM,data:zCGMZw/cpgm8viUVpt8/vWc/37A5iw==,iv:uMYtAM78ZqV25rqYZnuk8R4k4jTW88H5gOCe52ucTWg=,tag:XA8UgZW5qFRAANElyde4Aw==,type:str]
+            - assertion: ENC[AES256_GCM,data:3NVrddfuPihYPTxSSznIlXRLXZ8=,iv:SSnuPoam9dc7+YDSSDuqos99wUGtCxy/bHRdj436daM=,tag:mpdqZ0jGNOavwONw2DGM2w==,type:str]
+              message: ENC[AES256_GCM,data:lblIazNDA8sDWMfPRV4FITQv+IWDUUvL47Lbo6w4qNg=,iv:I5CAYpYd2Svuf8fcH9x6Kfw+Y/ow4xJ9qRWtdDVD1QE=,tag:fcw6As0VkTHRnmoeDXuXXg==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:H5E=,iv:qxQBjeNShS0KDImvnQI7JReh+Is8R3C++lJ4c8K7eao=,tag:GrwehhPM0bGa+uvjmGFopA==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:Yds=,iv:WtNKD+W1D4MV+e8Tz0W/KAtstKHZXOId17PE06kL4xc=,tag:cWG0gg4bb6Bd4yQ1JEy9tg==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: bryantnas is down
-    - id: "5"
-      name: ct102 (syncthing)
-      description: Check if ct102 (syncthing) is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:Vw4BOkIUcrTehqxBgnD4NMG85Ky0KQ==,iv:7McEfI4QBQ+Rhu9xJg1BKyCmsA9KGWyElr6z/QmgjKw=,tag:2f6PzdIvHEErWqAhaYMlGw==,type:str]
+          message: ENC[AES256_GCM,data:rhRWITNZ/6av7vMcfHwRYrA=,iv:yG/YOfXT5f+uiIzGSWf03f4Br4EIouM4fiZl2We9XCY=,tag:6QV2kQLSvANOPuIRQa/+rA==,type:str]
+    - id: ENC[AES256_GCM,data:sQ==,iv:o/uOFGXsEv/HPHj+pdfuisY818XB85leAadg7K4rtQQ=,tag:kXaK96y6TH4cYLgaXKHmYw==,type:str]
+      name: ENC[AES256_GCM,data:p1VucYCRDXz27WASvR1XG1s=,iv:z6fLaClrkeKzJ7mTA3Kh9DU7WqyBoI7x76bw87W6K8Y=,tag:0GtuTvkWCsHaCRHox1U6EQ==,type:str]
+      description: ENC[AES256_GCM,data:IyqSYuQJER5RP+2AyYnafi506nAw1qWKGFQ1IUQ6YMs=,iv:G2RcpKSYFUsniG/tWWt9fc57e5El8+cDCUttmDqv8nI=,tag:4anYHe+074R7/jdHFViNYQ==,type:str]
+      interval: ENC[AES256_GCM,data:Sko=,iv:uwB56LKckH5XeItNIwsVMusdgJvf0PJeDFZWeSVEA5o=,tag:dO0M9yk1kS4epdIp/OPpxw==,type:int]
       requests:
-        - url: syncthing.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:k7JcBFUbz/U3SdqxyxiVnoHbFZaaNM0oSw==,iv:xPzadpIExOOrzIGpZfwAM0cbKO9P21Ph5aTg+Hll2II=,tag:yhVwZW6jDHTg9EkI3YPsjQ==,type:str]
+          ping: ENC[AES256_GCM,data:KRY9bA==,iv:x05IVWTpr5Z6mxVTqvgJ+ebKwKQDCAQ7K0oOX2Gcx9w=,tag:yVLWsWbn5KcwFqtwlTqrBw==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:T0iZ5s52bKJs2BPf6x+OfqU1grKg8w==,iv:ySukmJVYY81oBhiuBSr9aLfEcQFO1CORt+mcIT/Ddc0=,tag:qu5WTCUjxEGTmT+Y356gKA==,type:str]
+              message: ENC[AES256_GCM,data:65Vbzs3TpWO6gshS5yHdPwE0pTfADg==,iv:X2qHwkbAbzht9pdNNWDFc1K4HvxhE95dgyEkvPRx2xI=,tag:upYTiA+sA47WDkk8DxkjUg==,type:str]
+            - assertion: ENC[AES256_GCM,data:kk+lF577GMgOlRsYTzKbnpOq70s=,iv:utSzNPlXDPhqnAbXndR+ilO7D2rwtDDLlmHE7qJknwU=,tag:lfpo4ZdqesnGBB1malfkfA==,type:str]
+              message: ENC[AES256_GCM,data:YtUxkytDlGS+K0zecfBp4CBZdDny2VEBJtUXGN5Tzug=,iv:KdMQQy4QJGUVgM6qQBB+VwFi8Qdxu5Lnxe50vnkfOEY=,tag:smOWNqiB4ztA8iigTVgthg==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:d3U=,iv:r/4GOg+s71ouzIo9Yp0RCpTfGQSN4+w9vS//MMHLF50=,tag:squweeYUhcdYzuUvjZJtLQ==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:YYQ=,iv:CTZM8JTgkka+dvN0pAySbp+siGMWlrjgZrwwuycpQ2w=,tag:xcxerPgYRI/JgcR/tDFw8A==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: ct102 (syncthing) is down
-    - id: "6"
-      name: Gitea
+        - assertion: ENC[AES256_GCM,data:Qim80/H0ZHeYMkFZPEoSB1jv2QzSDQ==,iv:3onjrQo9Z6arFQZ8CVefhcB9R6541lOaCwqNSJk1WTY=,tag:cHOyZhHWntXIeHsFvN0KTg==,type:str]
+          message: ENC[AES256_GCM,data:oZe06ZrDLTv2ze9iINP9+G7aR17++3wy+Q==,iv:wPoG9b747Zm8I04+GuyaMIfABJ9YnOVM8kvotXq9XB4=,tag:d2+5rLPe6jtM59Dr761i8g==,type:str]
+    - id: ENC[AES256_GCM,data:KQ==,iv:9jtCkfqJzvkonFygtymj93XBE/7gi8Rqz9osqgTDAUc=,tag:dVAxFWXJwAJQWLiEA56/Bg==,type:str]
+      name: ENC[AES256_GCM,data:wMJih8Q=,iv:q/qLnITeQrYmzdx2s5JjP0ZyLPTTiKCLVj8GFZePyLY=,tag:iu0MRFMs1XLCCm/TP+3+Bg==,type:str]
       description: ""
-      interval: 60
+      interval: ENC[AES256_GCM,data:8TE=,iv:euFbeYK1axSGSjzy05tfIaXseG03CxI8bxeGjuY7pu8=,tag:weySOVaRnrnYpTkm+q1HAg==,type:int]
       requests:
-        - url: https://gitea.local.timmybtech.com/
+        - url: ENC[AES256_GCM,data:c9Q8zA6G8NRfAdiIVb8d2SXU876SzDCKZU93hCzeXyk+SpQ=,iv:6bGvMSBVXRYmhgNvXIrxgSDsvvC4ZAcoeipG4sovczU=,tag:9RW63q2yrtKP21hM2M9bEQ==,type:str]
           body: {}
-          timeout: 10000
+          timeout: ENC[AES256_GCM,data:K4YNJQE=,iv:bmwTytEEAbDi/5pdEWA40J988+64hJfew7VLHFeuFqQ=,tag:WnxWFGDpyILZ1O6NPxAH8g==,type:int]
           headers: {}
-          method: GET
+          method: ENC[AES256_GCM,data:5S+p,iv:lphg6yUPs8CfGtKFYr0v6UzSS1jme8VUoFubnQWmC0c=,tag:2VePuP8f6uvhTj8okofiNA==,type:str]
           alerts: []
-      incidentThreshold: 10
-      recoveryThreshold: 10
+      incidentThreshold: ENC[AES256_GCM,data:TF0=,iv:z3z9qolTRycBo4w9cAcarrhsBELQrc8Obj5Lv8az8c0=,tag:6uBukB8smeJmT4PuhDXz5w==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:Ruw=,iv:e1BoL6B+1z8ETz8zVb9GKqHxCcEPAcWnd9fV787KCfE=,tag:Y58/UqkWbQD/6oxN17HWfg==,type:int]
       alerts:
-        - assertion: response.status < 200 or response.status > 299
-          message: Target is not healthy. It has not been returning status code 2xx.
-        - assertion: response.time > 2000
-          message: Target is not healthy. The response time has been greater than 2000 ms.
-    - id: "7"
-      name: Grafana
+        - assertion: ENC[AES256_GCM,data:nuiXvMUzBRoMU6h0gIcHrs2B1or6+el9j+zwuqucj/VUn8SPPQ0drvmaB6Nd8A==,iv:AIcNQTfPxta6VP7FtaPv0hStArVYE3oZBcEa+7tb3vQ=,tag:I3ENvEu20W+sdaFl5KYDQg==,type:str]
+          message: ENC[AES256_GCM,data:98u0XmZPW90ghvKSOVkrRpB+YDGCwuPpSV+AFrd0zxaTdhS2XtmYTGBhR86wYkRH3EOVfOq00wIiIyTGjPR473w=,iv:pL+QXjx6DYie4dDa2mJ0fc6eyBaeAQfMliRNbwvNu0w=,tag:tXA1VO7GultYV8Vv35dqbQ==,type:str]
+        - assertion: ENC[AES256_GCM,data:H7QdIyF7sfYKxBnK+rE4OdzzxuU=,iv:CFbSmQdVeIjQc3J1yXC3kf0Zgakj1pS6Deoy2U1baR0=,tag:jy0z1fAsMgjYco9DL9THQg==,type:str]
+          message: ENC[AES256_GCM,data:9+Bv0aHdxQNVFVdKU6Fv5RdRYl69N1ZhtIWDq+kSOxfB3qW981HhIaGQQCT3giYUiSOW7M+43pl7sL+Utc12RpNMf5OOQ4k=,iv:6sfBgLRudknIJSvaXegr32M1lvc8jZcjp8x81Do+kHI=,tag:AdvVSPrzXZmaCcivd3swMQ==,type:str]
+    - id: ENC[AES256_GCM,data:qA==,iv:TiHlkmqgI5L9pa1xrm2452sl8UpEUgeV05Qx8/NaW6U=,tag:Pyx+t5D+k5SDkhLDqiQ/uQ==,type:str]
+      name: ENC[AES256_GCM,data:JOmVchobIg==,iv:rMLvXvuDz2/WhkT2nd3LEmJ+StmYHPT9wYxcc6y4DyY=,tag:6on4NkntWUYhyCUPvTnQsg==,type:str]
       description: ""
-      interval: 60
+      interval: ENC[AES256_GCM,data:9v4=,iv:BssWRZ0MxHLTj5HyLfXqa6SntjZJJsH8X74hesW0rJg=,tag:RpCfoiritSPMTzmbOWtTfA==,type:int]
       requests:
-        - url: https://grafana.local.timmybtech.com
+        - url: ENC[AES256_GCM,data:o74ZaBOkpL0uQ9Lb+wTI1411EQ9FA9H/s/kQ3sQ2c6Y/RGEf,iv:JZnJsOdAaaaWZMnc7/ezI7C0H0jdXb09O8BErmjL1Fs=,tag:MBDBw7xe9gKgqNdkDusDKw==,type:str]
           body: {}
-          timeout: 10000
+          timeout: ENC[AES256_GCM,data:0PFSlJM=,iv:zq4pSdTcVnUm84+yVicAyexAz2ZMR/p2TLci96LVyTg=,tag:pkGmKADxSgLP1Wy4yucwcA==,type:int]
           headers: {}
-          method: GET
+          method: ENC[AES256_GCM,data:fPZk,iv:21i+bZTk2ht0eCiu8jYtOg14f0soM6NA7qdIObqSNIo=,tag:TJ8Jr2W2WbNt2MeU4nlSEA==,type:str]
           alerts: []
-      incidentThreshold: 10
-      recoveryThreshold: 10
+      incidentThreshold: ENC[AES256_GCM,data:168=,iv:nlGHM/2ONfUfQCDVOPqSF1UT7WQVQCGoWbLgIfzqJZ4=,tag:eM1YZVyiF7H66d7mQc/f4Q==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:6b4=,iv:iHSnYHZAtkDw/4mBmeNECpHtLtZ5fhwne7bX7scnz4M=,tag:E7RkyskuQwwWc5ZkJL7MDw==,type:int]
       alerts:
-        - assertion: response.status < 200 or response.status > 299
-          message: Target is not healthy. It has not been returning status code 2xx.
-        - assertion: response.time > 2000
-          message: Target is not healthy. The response time has been greater than 2000 ms.
-    - id: "8"
-      name: homeassistant
-      description: Check if homeassistant is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:DcBwMfI0I6Uk1SFPmTgkjWpVgugZPjogIbNQjJGid8/YI1Tsn10bs3toNmO3ZQ==,iv:BQJ8p/YUFNaGLqttlG0E9DFtX3kSaJdq43dD2pW0ZYc=,tag:dpx7Vj3VnSNfio/2/GymmQ==,type:str]
+          message: ENC[AES256_GCM,data:a1nFCTdtXJ8SRPBtuu1hZwdyMtRJSLa3o4NvSodlltT9SNlyghpJmxE1vcuGhamqm7sdGbqELQzLNvxXNxf/Zmw=,iv:BBV9wZPGDnlQhRlVYqDTdORScfPlQT24WFjn+faUHgo=,tag:zmEA/dhavYATHJG7bQY5dQ==,type:str]
+        - assertion: ENC[AES256_GCM,data:8comFfJGcCbB2tkTtQBfvJkGhVE=,iv:yNNxwedJyaMXDhHqs8Fy7dfgQRB1RQjYsPGahQQkOYE=,tag:Ur+ZZJylthwi2SHMyA6wPw==,type:str]
+          message: ENC[AES256_GCM,data:HgBhsvx/g3JAr/A9wLWQivdY0nclMQ6tv8zi2iuzwdWyZAuxYTQDfOEEhpT5oiO/eIB/T4k9dOLlVsg/H6ommyJsmg8NGes=,iv:c9WqCtJ38GoLagi/gb5pGoKc/xGzZOqxjps3axAKGDA=,tag:VPJoxFhTya2O2vKEWzgl4g==,type:str]
+    - id: ENC[AES256_GCM,data:ig==,iv:KLV9Laj1SuZSEAOHGv2QPD9lyR+m1EwxuOjOhz9Sxkk=,tag:os0prS0Zash3zHH8EzM11Q==,type:str]
+      name: ENC[AES256_GCM,data:lAgRi25xdvHVpEH/Uw==,iv:XNIyx/qDWSzYU7xOO5k0BO+xCoSwWrVk3P6Zl72z8sA=,tag:qADBWxfA7aqRGXEYzP2g8A==,type:str]
+      description: ENC[AES256_GCM,data:ww6wAg7jA4vsUbZ68f5lhkmjqAt/bD5MtVS2MA==,iv:FkuGt+TEBFCAe5IX9NvgKcVU58N/MdJ4RVDUASq63TY=,tag:qWWuMMnIUIZzSuramFJQ7A==,type:str]
+      interval: ENC[AES256_GCM,data:948=,iv:W09R05PsJ3VRgmf5My9WB+bcGs+2I9ROQUlCT8aWguI=,tag:uW+vZ0dK6u6ypxFzYV9Ogg==,type:int]
       requests:
-        - url: hass.timmybtech.com
-          ping: true
+        - url: ENC[AES256_GCM,data:LhTcGOu7W2aqQeeCQ5Y78WigVg==,iv:Pjua04yZyERrxcFLvrzQH+dLFydeJbY71T4L002+omo=,tag:g7RvUai5ftLWrIueMue4RQ==,type:str]
+          ping: ENC[AES256_GCM,data:eCelGw==,iv:uustYUt4RJVCe7wh2i0P+aQkggeMb6X6xgkrlJxGlu8=,tag:pa0nxoBN7zTuQEvyi9c6eA==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:Gms9nos7kyZYsWlBgB0LGYSuWTGHXA==,iv:cIVQWxLq8jLFfvVyh9Uy6EHtdfBmcy6Z7v4zrruclS4=,tag:qdrWYH9xkgmuabD250satw==,type:str]
+              message: ENC[AES256_GCM,data:yMosU49vpqk83yR4dRIjQd/88D7qoA==,iv:ZHWOl0Cyd1tssgY9YJ6QN0jVXkqnzzGAc4aSuX8g4ko=,tag:gDnYXD5dWjFhy9VKKRdW6w==,type:str]
+            - assertion: ENC[AES256_GCM,data:0rePziawpojov4OyfwRQ5hle+44=,iv:VUzc1QVxpWfX6sUwn5Uu5D+d5RDhH5wsfSxRQER8Glc=,tag:X8x0kvzZ/2GIRRBs6V8WIA==,type:str]
+              message: ENC[AES256_GCM,data:1OrkAcy2vyC0TRsdCTU9hvRLVS6ljSVe8aGQ0T2g5O0=,iv:knD47RY5yjsWqEiJfGXe3X+dvIK+YEa3MOkeriw+n9g=,tag:4NWNvEME9EUzflgTuVD/Vw==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:9wo=,iv:2CHSx7nCzSVuUl4ypdmyPdnDBtRAiu/8qP8TMou72Sg=,tag:63xW1+RmpQiKjBOfRZ9l2g==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:55w=,iv:I5xs/3DyJMS9vDNkN7MKfJo3ItQmpFgGHEqsuEgReiU=,tag:Fheonik5xxgjhYFy2sYJEA==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: homeassistant is down
-    - id: "9"
-      name: homepage.timothybryantjr
+        - assertion: ENC[AES256_GCM,data:uNKJ3hdzXokObj6wB1F5e1TPq9SqIw==,iv:Aiq0xY40Mc1VrV1QtO8oZdUJLxaohqao5dz51giqjno=,tag:yNrOzo6ZiABSK4Z3PA395A==,type:str]
+          message: ENC[AES256_GCM,data:q/bZZ2kNrpoEZ0/Li2yXbQR4smKa,iv:dwz52UWTLthlro0mXqThepEZngwFFagyn8msbl7oOqY=,tag:S+jp2OXpQHsUBpoIGHMTJQ==,type:str]
+    - id: ENC[AES256_GCM,data:3w==,iv:eueg096gIs1trzVeNqkfEoSXSKKl9zEwt+PlavqoPqQ=,tag:O9nGZF4QJB6RFodRvGKJsg==,type:str]
+      name: ENC[AES256_GCM,data:OW17ek/IiA1eSAEKA0iVC8rAwUJqfCTi,iv:gx9n0LqhKn7LQcLDJtYO5ky8+v1+3vjN2DWJc1NfyKQ=,tag:VWphXpqtBZTMHGCX14A0Bg==,type:str]
       description: ""
-      interval: 60
+      interval: ENC[AES256_GCM,data:gys=,iv:msZg8tKLTA5vKte5j5jN4h5MAhLq7WhDz0DGfpdT4lE=,tag:MjYCrsVJH794Epu4wIk1rw==,type:int]
       requests:
-        - url: https://timothybryantjr.com
+        - url: ENC[AES256_GCM,data:VFksR0n1wYM5jFyQAGaMaPGHBmjHjvSB3uLT,iv:34I/xvrblR9WM/xXp3Gl7MW8kwiBiSHfvqN2gu6p7oQ=,tag:8jSgkqFuBmT+JNlj5get9Q==,type:str]
           body: {}
-          timeout: 10000
+          timeout: ENC[AES256_GCM,data:FlZtoXc=,iv:i/QEwGZnmx78c3PFEjXyrWfXpj0J1vYcumcjevHNO4k=,tag:IyRAVePnuin/DwZaN73oRA==,type:int]
           headers: {}
-          method: GET
+          method: ENC[AES256_GCM,data:Tl5Y,iv:5G8b/+fX1LLpZeL9AlOnG4PhIeaspRiZzkZOxbN7l0Y=,tag:m8uE5sjMNajYPon/uHpBQg==,type:str]
           alerts: []
-      incidentThreshold: 10
-      recoveryThreshold: 10
+      incidentThreshold: ENC[AES256_GCM,data:I+U=,iv:6l7OI48nl7ZfBivcpdhkbyepgyr85HTc3ZwP5F5YSwk=,tag:XT9/1P5kphmkKlc9DQZ44A==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:EW4=,iv:gSIlEQqWiw42k5rmoRZ/+Kmo2Ma8nIuqm7GLVxeWAw0=,tag:kU61gHe4TaPFvRKEbQhn+Q==,type:int]
       alerts:
-        - assertion: response.status < 200 or response.status > 299
-          message: Target is not healthy. It has not been returning status code 2xx.
-        - assertion: response.time > 2000
-          message: Target is not healthy. The response time has been greater than 2000 ms.
-    - id: "10"
-      name: homelab-oci03
-      description: Check if homelab-oci03 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:+syUOjhrqQnMKDpwEIiYxgtRN7tN35MP/YQ6beaXuRXTwk8wUcxtOI5Alf6Snw==,iv:Nq5BA0EgfmaQQeno/m3N8mzaAWSwuHfNCfte1Gy4084=,tag:PBwoIRW6nborBsi5NrMFkA==,type:str]
+          message: ENC[AES256_GCM,data:3DUpQy6E72bhR8R0lyURGp71jRSkLgUNclInhaTa0iV+3/8JCfU0MbGnBuAdhKhzhIcZ/QuPPT0TF6D7PYceELA=,iv:0X97cuLZCadupLNiy3ZUCbO+K++OdjHAoh9h+9JEW3A=,tag:dIjmkaYo1F/85wW0Fe67/A==,type:str]
+        - assertion: ENC[AES256_GCM,data:qF3D27LedNui2D/RINykly6ohMY=,iv:RJOHIug56V6KCCr0/ZcrHeUGGoxGRpcLRXbh7PJllEE=,tag:eIuy2WEI6eaH5LSApK+FcQ==,type:str]
+          message: ENC[AES256_GCM,data:TBneH1UmSmp+AX8m1dY5f60+E6sLZTkZeBQrbqi29uhSgwipZE4xn2dCKMYMIjDQJLh4Q6vENoR8XuwWCH9PCoXDdOU9eWQ=,iv:EbAhW8LYfOxlEuncLnuheotW2E7y3BMQ7qKDNBKb3c8=,tag:1y7APPNE0wwG20UYOvXv9w==,type:str]
+    - id: ENC[AES256_GCM,data:pIQ=,iv:E+m7JsriN6v0RJ6JwzPVeE9mPnHo/e4EWkCP/Yd9YRI=,tag:pshRb8vDWxyfSw7eAC+8cQ==,type:str]
+      name: ENC[AES256_GCM,data:YaSRK4L5T0GfSoOZdg==,iv:H67bggZdfEM1cEkoGLKiHhWyRuBFcxcds5PCir38vEU=,tag:NxRNpy4STf3kfzjgO43NjQ==,type:str]
+      description: ENC[AES256_GCM,data:5+K+1xDPrZ7MBiaxbkDkC5uaqWrPpxOtwJEoWA==,iv:YxkQBWrFAzYgaZMTBTAStQ5WeepzwLcLsq3agpB3sWs=,tag:CPfbVsfAOQPvvUJGKzwmLg==,type:str]
+      interval: ENC[AES256_GCM,data:CNY=,iv:SDi4iHZKm85Vxs/4hD5/hPfA7z4QVZ9vZEMn5peGzGM=,tag:5v4sqSbu9SRKR6SbI8XIWA==,type:int]
       requests:
-        - url: homelab-oci03.local.lan
-          ping: true
+        - url: ENC[AES256_GCM,data:TvyuZjDXyfRZlLNzUuvq72Bficwj1DU=,iv:pYs5zNwyEa+G9jMSFAma4f7C3VMRrSPXApL/uoqi2j0=,tag:hxXjf2jjP6JkhA7Y813AKw==,type:str]
+          ping: ENC[AES256_GCM,data:U/cdpw==,iv:yKLfj0Ur31z5FHlroAD87Dm8Z4y3sWlQkRqKz4BTrzE=,tag:UgNYU0qgjVZojxhEwas7vw==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:CDJ6lxuXwp/Gf7QiUeloThRhH9w3XA==,iv:IIUozK5C/i3LfBDy64Y/qtJK95hhu0yck8swNxlvXrI=,tag:rsF0P4P5B6kFUuWyKXw8bQ==,type:str]
+              message: ENC[AES256_GCM,data:sGRKV8V1y3gkvyK/1SMZeDD/4ed4KQ==,iv:nefwKGc4FKDfB5jfFxUYkDkIIy8CnlO4dEUXY2lr7tg=,tag:PVN9OjhamKm5VsPqT57f7w==,type:str]
+            - assertion: ENC[AES256_GCM,data:Kqnw2s40ZH+mGDoSnSruhYvd1lg=,iv:v6D9+NRxzYNy+WvW6rUmMcRlUO+pbl0zKd8bUS8F1KE=,tag:L2BNIt5EFcOKw0jnI3YepA==,type:str]
+              message: ENC[AES256_GCM,data:AkZo256VqopRdnPGz4CY41JkOax5CUUsumK4jkb3+Kg=,iv:C5K9TGZzv67tINDmS3Iw7KGiHRov+nIo5Fwj8R0cTCU=,tag:mF601PfsGUEw9VR9dWFJUQ==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:mZ0=,iv:gviiStgoh3e7wYH4E+4IdFTac3say4Q6hPWrmFHx5Xs=,tag:Wm7bgeoUoaI8VGvtgyBEeg==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:BVc=,iv:n5gQlpUBWCeU+MjEC+s4lyYrzjv/LnqX45L9hAMjzMw=,tag:eZ2Y6DmfjfB44OeIAAiaCg==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: homelab-oci03 is down
-    - id: "11"
-      name: k3s-0
-      description: Check if k3s-0 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:DwetfWJu0hXx3MznFff/aEU6MCzR6A==,iv:iPtodxwqbqHh8AkCYmSxNwkfo0onGw1gldEErJ4KMVc=,tag:VREyr9iZOwSK96SJUoklBw==,type:str]
+          message: ENC[AES256_GCM,data:s/KcYZ3lFflHEjf/15p5gr17stIH,iv:7wK8a+U7xMUNiKpYX3O8RWY6N9KovTwQKSYAfpxVHtk=,tag:P7jyltv871D+AveD/WIRdQ==,type:str]
+    - id: ENC[AES256_GCM,data:YWg=,iv:3zhybhhMVBqCYQnHSvxzRmNzePpVmSmHslsMxNbU9wg=,tag:a38pAVAQ9SUiCbCKXmLD4A==,type:str]
+      name: ENC[AES256_GCM,data:TiTBk7g=,iv:wCYDKrER7qCLV+qvJkdcAIpzRfh7uxrSS1d/5pZMAO8=,tag:k8C+FY/anrxs1DtC2PhUtA==,type:str]
+      description: ENC[AES256_GCM,data:E5PrtPtQ1n0kbux/KgG6/tD7gEA=,iv:ATFgkLda2KycVR0Pwkf1LIiMUq6eyFgVnBxhRujkES8=,tag:RfXsyvBTQvu9ASCZd5fJiA==,type:str]
+      interval: ENC[AES256_GCM,data:TY0=,iv:d+mVacZj6XSt2uCKngcRlgBM+W+UNptyFbDzw6hfB2o=,tag:Qan8ky0an0B+kyL5oLH24Q==,type:int]
       requests:
-        - url: k3s-0.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:16VywxqYL3RWLqXGw0iKQCUzyTdB,iv:hMlxjH1iM/GIsXfCAHBMR6zoQaxDIpEzA8PrTDpHwBg=,tag:qFbxkigxEXXml0/dxUUgNQ==,type:str]
+          ping: ENC[AES256_GCM,data:VhrIrg==,iv:wHU5aM3iOAP7mnGGDxVfwGwS2ESSIjsdS5kOYoffsb8=,tag:BG+43BGUPqlujNRw5QKMtg==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:uF9PqMWejhb5MwEWQ5BV1XL8AmXZYQ==,iv:IBHDkEKT3BLgVPetJiZ2Q/vUVJ6JzZ/5T8211UWjxyU=,tag:Aqx1Gmn+bdOmXq0nHDs2Lg==,type:str]
+              message: ENC[AES256_GCM,data:/hMz+pbFMtehnh3nmTsYOOwOTBYn8g==,iv:RzwxLDhZeuh+8x3i2nld3Au7Hx1BJbvq9mapOdGPnxc=,tag:fAb6COsBfX3Y/wVtP4Foeg==,type:str]
+            - assertion: ENC[AES256_GCM,data:upP2cNWHlHwPKnXPmA5ZxBGHjoY=,iv:8OugBN1tuTmi7zq5VBjTvytfZ8yE+1XLXCkIxuqkWI8=,tag:5f/P5OBMsky+ra7OiX6Q8Q==,type:str]
+              message: ENC[AES256_GCM,data:bmvDfEjZdfjjjJ+hrajFk3MFfzQYl3oUB63Af/WV6oU=,iv:6MbV5vBl4A2jbRmLmC39JpoFV8bvXd+QX7p4jJi0VeI=,tag:V/ITa9xAhxXf0CpIxZybTA==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:+7g=,iv:rgc6YLigswav5BdluDZLYYfkMOCLbF6kGCMdE5aQlDg=,tag:BaZooCon6T7q75nQG3NE+Q==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:03I=,iv:P2RI03o2hjbjqz6frJd+44HGVXv68bG54+ttW28LOhQ=,tag:LpSv/jVWMiB0dAMa4XEO1g==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: k3s-0 is down
-    - id: "12"
-      name: k3s-0-worker
-      description: Check if k3s-0-worker is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:gJ5ZhR7yNH18i2+8A6FotTMHdjLj4Q==,iv:HD65xT4IGViy0jL+CEBDQTWkUDD0PmeESxjtJY/VmaU=,tag:iIaOMs/tDY34Gnl9XtfCvA==,type:str]
+          message: ENC[AES256_GCM,data:BoVDU+hyIEGSz41Q0w==,iv:p2nb8tqnD9XSxOYkvu/S8NtWlNS29YrIzILCVf5KtBI=,tag:RSTUvETD/Uf+kvdPv2B7Hw==,type:str]
+    - id: ENC[AES256_GCM,data:Jks=,iv:OU8DjrRrkdUiJsbTsHpTs3S9ako4TG0qs5FamfCt+zU=,tag:RWCL4lDsDj0qrJWTZu8q0w==,type:str]
+      name: ENC[AES256_GCM,data:+8w2g9nAjux4GTbW,iv:JT9Byd+BlGsAU5rYQhNbSHV6frnEfiMoO33jV1lOZfs=,tag:vRLLLJVjYL7QnV389d4uYw==,type:str]
+      description: ENC[AES256_GCM,data:Ov3gwUe8ynmPVrQdXWYU8i/FHsl8qcwEV8Wk,iv:fjCARJNhaAe2lYJo2CweBDTI6T0zHvgGqkOOL7wgOVo=,tag:Yp6EVDIxHbnYLG1jwdd1iw==,type:str]
+      interval: ENC[AES256_GCM,data:xrc=,iv:chTo05ii81CI8q32U3kVU9wMogPUfi0Hqe3C6syWraM=,tag:zoVJOpgUmFU2MQSkySUadQ==,type:int]
       requests:
-        - url: k3s-0-worker.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:D1ftHCOh6CIHLGlnYHY4gcT5m8YCW0Z128wlog==,iv:WlkSQJ7lC0lcCCL1siu0SkxdzO3rZVQWSc4JGxmFMHQ=,tag:621lZle/CUyrkKE8ZGA9+Q==,type:str]
+          ping: ENC[AES256_GCM,data:U714IA==,iv:oRBSePt78xiiRbPLjTm1E8Vlt6o82EJOZHJavzveIfM=,tag:MKa6lTX+peZ6Q1Kv51cRHw==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:012RPq/riJr/HFDncxBpFkDxazMjsQ==,iv:9WYHVRjaEYipdS74IAIFmyXg8g+OImRS91zGGiIrm/U=,tag:8mhZWqMhTYs3JL5qlc5VWQ==,type:str]
+              message: ENC[AES256_GCM,data:ytEh9/qVX41lTt5FZzLPMmjc6ftM6w==,iv:DRqFZbdqJK6guS4D9c4lShB0DdZHXYmD2IUemjxuKD8=,tag:2segAXL7BCpebgzMFmNbLA==,type:str]
+            - assertion: ENC[AES256_GCM,data:tfdQVZhIaQVLb/c2M+DYrRpOdFk=,iv:iTNXPDKWKXnLD13SZ0BH0JVDQ2LH8FelVEFybAmwKBU=,tag:xS9rXnumCYpbHa7u+C6H0w==,type:str]
+              message: ENC[AES256_GCM,data:loKWZ9VFVAzUL3gHbI7wwvF/u3uaP8sqi1lCdLddlTg=,iv:FUNyvVkGzUYIV4ue279JSvY7WWe+EZckHnn3CNAlMKk=,tag:APw7Dpmv0FiKkVsd1QqoPA==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:FVs=,iv:MZbuEu6YFZ+veoOHfNszCrf6cSemcGUI6HkX3CwsuLo=,tag:J+VdSk2h+K1QSRHyjT+qQw==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:sHw=,iv:xek81kk/9GnK9W+BJapNWJ9+X+zzvruhrH7i5yQ9COc=,tag:q39xSeViCGdmPacWrj5ewg==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: k3s-0-worker is down
-    - id: "13"
-      name: k3s-1
-      description: Check if k3s-1 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:XdrX2cOC93L7hxWipSXYw+j/C+OsAQ==,iv:WdG+/3CMiX8x/ZWBlFSZY1MVLhtSGCSIdXFKktUOH38=,tag:r+YEl/2hSRBtEtGi2fIuLQ==,type:str]
+          message: ENC[AES256_GCM,data:orry6QezloGF63lSLJ6wZbz3Wv8=,iv:xzyiFz8S4qVUUnXOPblMZRZGUVrS1NGYs5Y9TtMz5AI=,tag:/Ba1mDhB/Vlue78fLAhzLA==,type:str]
+    - id: ENC[AES256_GCM,data:Q7s=,iv:ZArdKV6xO4stKmcGwbyWFg9ZYmGONrE4CXesez0nRW4=,tag:T+Kib+EvHYCnvrXNsCUEHg==,type:str]
+      name: ENC[AES256_GCM,data:YWaKoU4=,iv:W7UBvs+BZrP8vxViD2+c8im4hR/gJ+gFIsawAfAlHK0=,tag:bvot6o7p8PeeuRqUNSH0wA==,type:str]
+      description: ENC[AES256_GCM,data:IXWK1/QCFPc6uXpVpGQk/Bn6+Fg=,iv:iFfZwBl884m9omJ4ygb9UkgkwqA9rbo+Dl8jVy/rNY8=,tag:EIWkbgREPfRPrh2yB2HeLg==,type:str]
+      interval: ENC[AES256_GCM,data:TzA=,iv:VnQTb81DEORzzR0O1QtI/o/qacMFmPkedc+97cSlzmM=,tag:ddVKFg/AXmGzD2vgNim2ow==,type:int]
       requests:
-        - url: k3s-1.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:YCSfuXIpFYXxVmNA0haYxEmCYxqi,iv:hItb13dzD2W0H0G0Wiv0IvAS2UcjjDiQQwsxBxMPzkc=,tag:RM/8AV8jTuJQUjqnqRAIUA==,type:str]
+          ping: ENC[AES256_GCM,data:GMEPkg==,iv:9jww+wjC0D16Z9MnP7AKcka44XcbKaz3KIMtn5q/Ywc=,tag:lWkKUJuRozZJblV8aGMatg==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:C11QCkxXzOUiw35yPq3zpgFMeTV8fw==,iv:z/sw5c3fKiTyPjE5gWG6qjVIokF4iPvKUPMVzIYyyDk=,tag:nRzBWZdoOTeCWC5SThd23Q==,type:str]
+              message: ENC[AES256_GCM,data:BcR9evcig//4dda0HFsvLftHpldkLA==,iv:7aWrURLVbjV+kWm7nyWAagznGjPwjUv3K+O0TXsQFYQ=,tag:bJd4S8o8iuFCSZU111NgqQ==,type:str]
+            - assertion: ENC[AES256_GCM,data:50cNRnEheQSqoFGa+FwURkT/Ino=,iv:60+4mPH1wqzPKWzDZUgJFyZNrvryAbMgTw0ggeMwa2g=,tag:buxsW8qNTgCO50Y5tNMBsQ==,type:str]
+              message: ENC[AES256_GCM,data:L+ou/LVYbAZ7Pjutk39SVTTzSm6bkFePuh4WNwx2Wx8=,iv:/9Il2SZZxh9isOmxNmV1JK+dJ8EM915M4W1iX4jHR1M=,tag:iSkbG+UcM3Dynsge/WlC9g==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:sdo=,iv:KTbRvuvZaYEKTxhlwelAuo1oihqFqUfvVKAjHVjEnfE=,tag:hdr3yLmzMB1dqAuz1n0i+A==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:jjI=,iv:sGDJKRSgJxwYGN41SKBWjT8oiIj1NsK4GsDZ6karh+w=,tag:79GM40BM8EyTYnKbgVnnDg==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: k3s-1 is down
-    - id: "14"
-      name: k3s-1-worker
-      description: Check if k3s-1-worker is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:f4Y+2hP+1grq3j9iiEE5bL42gu3Djw==,iv:jFWnFjrhTEVCAnY/JU0DuNt7IfYqU+RJp4/VP/LUqh4=,tag:699TxsgF0BGMIWx6nzppqw==,type:str]
+          message: ENC[AES256_GCM,data:nr3ql5bz4bkqG78o4A==,iv:CJQl9y0I+y63/lpbdNZSnUHoMHjD4ipIW9GCWs+SSdU=,tag:tcRXijou7BSwgKPm4y6xHw==,type:str]
+    - id: ENC[AES256_GCM,data:PPk=,iv:3SPFCHnE7S6ZHZyLh/qr7qpUgbz/iajNzSVHLJatGAc=,tag:Z/pm/hTJJWU3vWcVcRA3yA==,type:str]
+      name: ENC[AES256_GCM,data:UzK0X0qIslnDUG7p,iv:HS96h5+sD8XPspBS6mVnebg7P+146AAKaIYbGWBqLzM=,tag:lVTTIS6/hQF1d2CL30kyxg==,type:str]
+      description: ENC[AES256_GCM,data:ch2xq7kipXMFEdGgN2AH8XOVLUtDesZzSJbJ,iv:7QNai8HSFAE9ewYfqUNl7yk+LBb03TCRGi4rFemiWwM=,tag:d7LZaRmu79wN8Of2Iyu8cg==,type:str]
+      interval: ENC[AES256_GCM,data:DHg=,iv:/SHdIyCR6qqPiNC8g+S9HNRB7cbsyVvVkwOFdzyC6Rk=,tag:c8RJFbtl2VTvcwCjz35o1g==,type:int]
       requests:
-        - url: k3s-1-worker.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:xC37VIHd2XqBKj9OwqSA3nCTL69FmMDdBatyTg==,iv:1fsRtOI4+N3RCBt9NnoNl+DF8W/3fgspnxLKRrBwhJ0=,tag:eO36yeLVibkHznv35K+WrA==,type:str]
+          ping: ENC[AES256_GCM,data:1dR8Qw==,iv:Nmzd/KgxDRcEr0U8dFcqAHwzqnL6GBKgZJSATaz9PGM=,tag:aKKHyUa/z9J+cHfSayLapA==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:iZbtNY5pbXd0kicTb+3af/CvXCHAXg==,iv:EJkDxtY72nhgqSN4WhdiZW7a/zteZEJA3R4FEYE5pXk=,tag:PRo0zteVl+wXtzdJLqM64g==,type:str]
+              message: ENC[AES256_GCM,data:jMSaT7aG3B15qkfHTyMjyMNhiVZ+Ng==,iv:I6gAu87z48gdKDFBi6WY4zavGfqtgfiwR69Vhdopf8A=,tag:/YMkJNjZJ487ti4G0KmdMg==,type:str]
+            - assertion: ENC[AES256_GCM,data:91MWcFlbDpNmdJJQA5scF06yBJc=,iv:1kojwSKkeYgYHi36sbJOhlun12hsTBlhR3KlZ7bV5Ko=,tag:a0AB1Y1pOLKkqeT5IoBauQ==,type:str]
+              message: ENC[AES256_GCM,data:wdpoROTpK7Jyrje0dLEWO/mq8CPBqgkwAjtWuQoNM9w=,iv:djeVnzEgAT33ssCtp4kOVQbeZlEYyGiqQJ7TgGrBsag=,tag:7QoBQigmnWGaYV1y6uB6/g==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:N5k=,iv:svciObjlMs5Va4GAWXQYnnlqNdS7TsezFjBt2/9gTz0=,tag:UO+Uqx+BoWezed784EDLow==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:6fU=,iv:n+EEfJU/i7g+NeNiqvLwAGEf/OGwEzSX3cPZ9Ecb6uA=,tag:vArRgp0Sueze75tU5fP3wA==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: k3s-1-worker is down
-    - id: "15"
-      name: k3s-2
-      description: Check if k3s-2 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:LEU4s2u4KWeTpTdycanM49KZplkuPA==,iv:KGMOgclcA24zqR8S9ksM920BP7qZFo2kM0tHrCtmKrA=,tag:k5jQlQAaV0R0jqZ2ZdT2Lw==,type:str]
+          message: ENC[AES256_GCM,data:YjTzoYLivndIOtUeG0FPk0Gowe8=,iv:MJnLeUpY6FDARD6upSfEho1dES7qPfzNdb134N6Y+wQ=,tag:eS/+Cz3fSGwOIlVBVEM+KQ==,type:str]
+    - id: ENC[AES256_GCM,data:O6A=,iv:o/O8SJVK67uhKeIUffqHZo7wo1W0wYCO5BWlayIXbYE=,tag:PPNWLhq//htuZQiOTB+Uiw==,type:str]
+      name: ENC[AES256_GCM,data:FubogC4=,iv:Jq8ARSIlxlhgtFZdw5TdoV0v/WQcbgyD4lYiHEkEbjs=,tag:70wBkQvwFqVlqU4xcS/XdA==,type:str]
+      description: ENC[AES256_GCM,data:17XJJrXkbzlCuXXy2Otr4mwuHg8=,iv:LFqhf1xm/aFQCps8IW462b6tnYLmWZqcnr4C9RkKf4s=,tag:RQI7ZM+Et+2Aw6PKN/wvMQ==,type:str]
+      interval: ENC[AES256_GCM,data:Mmg=,iv:4LTlbSiKErD1lHu3I3fyhFhQfYUgp570zyHebFXjfcs=,tag:FWrfBIBxdytIPOIQ/0a5ew==,type:int]
       requests:
-        - url: k3s-2.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:8Rp7Gg+rNiysJAcW7BivfLoR1sFa,iv:666Y2bjFDzpds4BvsNYfz9shSY8jTthFC0RnxOzHb3I=,tag:ul0mZjRkOdotV3nlHCycfQ==,type:str]
+          ping: ENC[AES256_GCM,data:yBjgGg==,iv:sxSdmxg651Vy2FD/+YAQITXA2+ZaQPjTzb4K4ym0BKM=,tag:lqngAzYVZHjeDWRiGWjRhw==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:vLXxJfoj/ovo/HLYti2Vz9S+Ts365A==,iv:JC+UNcpQ2FmZjYFohxXDRyJnh9rcSomwmqM/hohygEo=,tag:Q6fWYoVTuJse76y/Ktq3YQ==,type:str]
+              message: ENC[AES256_GCM,data:3Uo8WOUOwTPaE4It5b85Wc7pl05PZg==,iv:OKoUSIsfdCPU8notE8Y8J/sJft2JPxK2LaikeBSsm7o=,tag:XVLfOYaEWeJWFdwAsAOggg==,type:str]
+            - assertion: ENC[AES256_GCM,data:OvI2BaxQwr1KRO1uZQedP7S2p1E=,iv:I9w8a4eop6QFmp3c/U9Zqu6f0y+c8Gxwa4CFu1znRFk=,tag:dRxJTXEn/vx0KOBKb8MgIg==,type:str]
+              message: ENC[AES256_GCM,data:UVy5FtcUsKbZ6tli9KG95OORFApkEotLNXqgk4n4Ix4=,iv:a4CrenBVGtyRFaeKr4iMzTazvuNyP8qCFhrcXbI/uUc=,tag:coQqo/YKeOIiaixPjyQ1rg==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:cFA=,iv:UrkhTNprAlSACfU+FrVJ/6Ccm85Yawvmi8m6cFhCHdM=,tag:XxJnQ9Mu2NykTHKXIjajFA==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:R1E=,iv:FsmtEUGxLJh42XQIV2Buh7jd45I0A9RnGicmSjxlLws=,tag:/jV/hRSy+zjeyNkpByhheA==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: k3s-2 is down
-    - id: "16"
-      name: k3s-2-worker
-      description: Check if k3s-2-worker is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:ysOGbBpQ25SmVU2LcTXbZI9rEXAG+A==,iv:kti6pxW+73baurzupNgfEUua1j9A/mgFkOmmoC90s4o=,tag:5C0mUcS8rV/4m0sd4SMtFw==,type:str]
+          message: ENC[AES256_GCM,data:b1qtrCUEACakjVVBMg==,iv:QSdchDM9YKttuYzxENir08eeUq83BqNbJkuj3uOYDzA=,tag:BB6b/5dffYPslC2ocMI8kg==,type:str]
+    - id: ENC[AES256_GCM,data:N0M=,iv:gS9RhkghyGzmKv8brtvYcA8sc7ELDcQtzQo7MLUS9Js=,tag:HHOpJCu6Sw5txoAy7D5/Qg==,type:str]
+      name: ENC[AES256_GCM,data:z1yH9UUrYN0nxAHs,iv:NRP0K19C5wbVVQt6bx00DXLzCdXRQGQxR7rcAXtzCHE=,tag:SZMKCSyYUozXimOgw+QuUA==,type:str]
+      description: ENC[AES256_GCM,data:OMhEsonS0C7tWg79OGlwpX5Xu9OgIh7ZUxy6,iv:0ns6i2WkfsIK/IXkdsBo0vmf2gCLUdGRgEIVb/33brk=,tag:0QxDliggthKF3XPvLWhGeQ==,type:str]
+      interval: ENC[AES256_GCM,data:MkA=,iv:/wHKjtXDRXgu3v55BziQOBrw6H5uErOK1lZF790ztGQ=,tag:vB3k1+hrzgsnh8T3b6K9aw==,type:int]
       requests:
-        - url: k3s-2-worker.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:f0hHVQPdkrgSkU95ziDw047kLI5DurqmEoD5xw==,iv:QaQ7xtUPS36X7heMtkidZJ6+RsN1Osh/JN8Z4JKP9Qc=,tag:4ARhff0E9zlDXmIiR8fdQg==,type:str]
+          ping: ENC[AES256_GCM,data:ASzbbg==,iv:UYtmHM5dUItUZwUu5H9e4PSUeRP7lP3+yN9tl9iFCYc=,tag:hJVnmcHYtngrv7gbIKPy8w==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:pXr9epE230EZCQ3jAAxeH/jL+KpJIA==,iv:ZKA5K7a1PoPr13s2pzMnSRhc6J8fXP94f6wwFtphMJo=,tag:QSt0AeOMR47ajVNL4KdwDg==,type:str]
+              message: ENC[AES256_GCM,data:KKptpc5v70jPP5XvDVH2IN4ezKeb3g==,iv:/h6FT73VjflnM227+zeZTxWgj08WWbv84xhLh+0gFHA=,tag:qCvJOV3IkFWlEYKw1vFSiw==,type:str]
+            - assertion: ENC[AES256_GCM,data:d4KMuvuozM8oDCNaPWCBFAaLd7o=,iv:j0jdb4KYriyLH68CaTXj6X0jZhgCF3Cppz4eWbMBTgE=,tag:ZxZlkwTS8timM+SK6/vMYA==,type:str]
+              message: ENC[AES256_GCM,data:fqnjDvDaT2Yiail9Fd0GTN1YB+N0gsPFTKC4Kp1a1U0=,iv:adrwjz7WtdovBhATqDIpT1PpWhUGAN6y8dPX9OA90Rk=,tag:XS4D9L+vXMxbZe18JdYrzQ==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:ga4=,iv:qimjghZWhyjQTQU1t5EyRkKCpzwPBB64A0M8y5YpCEI=,tag:BKtW/g31OGTdlepeb9hNJA==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:Rmo=,iv:wD0ECTRSBXM3my25AG2Tm1jRqom/ZEJz+cAXlI/dquA=,tag:ZCibhHRfqD875gVaP5BQbw==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: k3s-2-worker is down
-    - id: "17"
-      name: LinkAce
+        - assertion: ENC[AES256_GCM,data:UW+uMOgO+DToxQc82h9KcYiVQ0Juzw==,iv:2njhWg+CNuQ3Sa1RzNYK3xoP43988whMN8bs5PBi++w=,tag:wwgMiq6luPvwX0k1YWDqNg==,type:str]
+          message: ENC[AES256_GCM,data:yi4F2pMUAH4X3N3ogdxrU/cY7sU=,iv:D5OTEIIMgXD+n1ygaXtY7PjFfYXHJLoIObeeLFt8hA4=,tag:CFtkVzMDST+Vc34nGlSdfw==,type:str]
+    - id: ENC[AES256_GCM,data:dyU=,iv:qHF5Z5Z/L+FPXV7XghImAt+8wpHnliY/mpcEga/Hg60=,tag:GiqtgXsBNv+tAfbOOF6bvA==,type:str]
+      name: ENC[AES256_GCM,data:IThoniORDg==,iv:/xwKzBMFj7VdekZ6PzmgMI2dIAj+qddWx1SEk2NA/5c=,tag:J68A1EliKkHugW6ncoun5w==,type:str]
       description: ""
-      interval: 60
+      interval: ENC[AES256_GCM,data:Ffk=,iv:R82IbXA0r718VauW0po3Bj7nlxcIhGUIV4o75G55OOs=,tag:iZS8qoC9HmGhDeXV7bmMlA==,type:int]
       requests:
-        - url: https://linkace.timmybtech.com
+        - url: ENC[AES256_GCM,data:C9Pr2P0HVFy3XjAd1Vxrz1wB0V/OZi1KAi971vgd,iv:ipYVB4XKkhZCblEqW+7ohiP3O6+9bySbp6uf0ytsTU0=,tag:z8qSOB7LP1wkqo319ZeuXA==,type:str]
           body: {}
-          timeout: 10000
+          timeout: ENC[AES256_GCM,data:8FExtOA=,iv:1GYIi//aKxHEz9pjoGCmqiIpF7vzW7ldu7io41QLDlg=,tag:06V52IV6e8Zxa4jeS+0HbQ==,type:int]
           headers: {}
-          method: GET
+          method: ENC[AES256_GCM,data:EYBb,iv:ggVT8/P03WpE8Nd1cB+4ZM8MLclMqTNw+STfS7XI2Ck=,tag:a7dOJWimGKu5+FKQ5CFiSg==,type:str]
           alerts: []
-      incidentThreshold: 10
-      recoveryThreshold: 10
+      incidentThreshold: ENC[AES256_GCM,data:HVk=,iv:1sBTXjSNfSFNBbXv67nP35J+UenWdUHReZGyfj2R9Bc=,tag:klaaXrLTQnP9qJGMtOXT9A==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:h1Y=,iv:MIH393DfDIYixPH/hUCC/ogBkrn3FT6+iLDddsWQXwg=,tag:6CGQQ/Oli0bnJsRfWMqOSQ==,type:int]
       alerts:
-        - assertion: response.status < 200 or response.status > 299
-          message: Target is not healthy. It has not been returning status code 2xx.
-        - assertion: response.time > 2000
-          message: Target is not healthy. The response time has been greater than 2000 ms.
-    - id: "18"
-      name: pihole2
-      description: Check if pihole2 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:YSa+MNsgOQeF3dvuEfSPPGOzgkTpIS83eLMw34I4NnjmK2HIURfm4S/tnyKC7g==,iv:hAV0h2xLL1nXzeYYoI6MPjwmIGNXvOWXztrTkCchsAQ=,tag:wSFTu4vq+Yo3Rv3WABw7pQ==,type:str]
+          message: ENC[AES256_GCM,data:WAxQakxTIedeOaFiWIVvWAT9A81amlEosP8VUxwvoghCqIxDFk2QS6QgvXlrUroXJL0hRfrkkOdhr5Phqte9pbc=,iv:nK5aH3ohl2Xq2MNHI81T1yj2wcpKUEU3Md8bAeltZhk=,tag:jq0qtEykiU/EZG0PFBP+bg==,type:str]
+        - assertion: ENC[AES256_GCM,data:oJf5TiQreQXqTqUq1dcdGyL4Zzs=,iv:bpiw9moW38E71N9NzTHaq9rt5cHBoP+5Vdz1Xp0P/j4=,tag:PDfEqvcpp+cyvbQBIYT8vA==,type:str]
+          message: ENC[AES256_GCM,data:G0j4MpSgk/Rbklm5xMMfP1SK3Uxx3RgQV2c9SbvnGM3esCBmcFgLPtjzoVIxyeS2vffjFgwlWQiOUEew86xwbNQ1yxQlnzQ=,iv:/ctBUWjh4ony83f9yxJsXnUKvg3ozejN8m1ehwEO8ac=,tag:AUk/DkB+e0WypBsroWVVIw==,type:str]
+    - id: ENC[AES256_GCM,data:URU=,iv:VCqnK684rwgbw7F5cCccJCHyS1bLj4ifazG2wQDRIZM=,tag:CeS3kOzEXB8HVnLyHoqvaw==,type:str]
+      name: ENC[AES256_GCM,data:S/HAt5HgRQ==,iv:LZNosyrIX1/CCaEAWW1qt6ilfNisCok3DXnET8l3dZY=,tag:dOKeRJh+ELwwXdL+wEYoOQ==,type:str]
+      description: ENC[AES256_GCM,data:gWpw2lnUDRjbUP4QHVeeqSua63HCaQ==,iv:fEfOV3IMRXd/maEqPC7COyifBwla4w14ibnZe7wLLGk=,tag:efxbOPaAkRgRgJdvZHkw7w==,type:str]
+      interval: ENC[AES256_GCM,data:zc4=,iv:Ze3GoRaoZV268epyWpnClCmN2zKctZ9H2Gj0unZbptI=,tag:SY7aRKdvxvNAS1IP7G3b+Q==,type:int]
       requests:
-        - url: pihole2.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:V2uMMYwoTQa/uCQL58VtmhfKundE2Y4=,iv:QH84BsxPIeLcAZY/AAW5kQo/CdY3Bm1yuyUO1OtdVss=,tag:Q2TJigMkhyt3DavQxl74PA==,type:str]
+          ping: ENC[AES256_GCM,data:Y+1ZbQ==,iv:yFHsprLua0EoeLNkr/VfgeZOAK9/GsY626h0OAnkOBo=,tag:Zq9yPaW06SqHVt4s8YephA==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:Y3Eq/Xid07u2OW7p91HS7OlXJxPIrQ==,iv:cjfQHMyYh5rjQr5fqOLlTxdJdVWOSt8D7LFe11g5vDo=,tag:7xwATWpY1A3ykUAo2wrZwg==,type:str]
+              message: ENC[AES256_GCM,data:XR2qjNKMzil1G+V+Y2YdXA3f1T/oWw==,iv:QSEHR7/OFluLOE4/LUoAN1FiqhJFj3ke95E8PVlVR88=,tag:W9OJi6jvrYj8Zyb9Q2eNTQ==,type:str]
+            - assertion: ENC[AES256_GCM,data:gTuFPEUvwcr/99zdvhrwjS+5xtg=,iv:acrUgWPHMeySIXXYd0kip1bDy0H/pDLpePd7HnMgYh8=,tag:uSgBTQNHJGfahruwcUIxHA==,type:str]
+              message: ENC[AES256_GCM,data:dGcQOTulnafsKxtG/nne1XI/ngl3Dnsx7uLz3vYTBXE=,iv:uE2yJfk43V9ySUlIHm3obolidQimXMVIHH75SUi5agc=,tag:jmKsUbdFWhcy3q593WSGnA==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:Hdo=,iv:MDxLxfguL1yNjWB91uOLKhRmloh/0FQvt+nNgA7iOdw=,tag:NldiHwZWUmFd2nP8rby/mQ==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:KZ4=,iv:G2Hyq4KbM3mH7zpBy+VoVeaEY6tVptazKKpKbjH8GhY=,tag:sCGS2wAf6dkq4XtNY45txA==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: pihole2 is down
-    - id: "19"
-      name: Prometheus
+        - assertion: ENC[AES256_GCM,data:gVs1V39gEND3xgzOlWLuNqNC2MyKYw==,iv:CWrKjKjPzkGCOqGsvGSyBEM8qNzFinVQvNgjftoPiqo=,tag:2LP5H8JSVXp18e6D4qhYOg==,type:str]
+          message: ENC[AES256_GCM,data:s3MTTb8uSzMyG9i6LWFe,iv:iKcRn0Frrzo0GfJf7rdCSxXFRK1rbURcHvf+n5f/xy4=,tag:+fX4sKMnc2ISsQH7X65fGw==,type:str]
+    - id: ENC[AES256_GCM,data:Kl4=,iv:bg9OvUxjZVTrPG0+CKDnjQHqj1VhQp1cBSBt9q7ALu4=,tag:3hSSq6QBKUnJyMkswbIyGw==,type:str]
+      name: ENC[AES256_GCM,data:CxDe6Fm2A6hHrQ==,iv:IXSLBsC8IhlBPkv51qo5GdfQNxWpijXZRtZRTFn4TGA=,tag:4adycO/ynAaLq85s0Q0pYA==,type:str]
       description: ""
-      interval: 60
+      interval: ENC[AES256_GCM,data:DhE=,iv:z1jKyui3zwd9Kh3A7WrRp/lp1a7QOpS9ZI0t4Qz5HZU=,tag:RYzWDM9I2m3onns2gQ6Npw==,type:int]
       requests:
-        - url: https://prometheus.local.timmybtech.com
+        - url: ENC[AES256_GCM,data:ezGp7ED7Tmi1pp4KQ9HHT5FcKLyTxjRcqfUZq4w0dGFI9vwto0nv,iv:cwCWWGhqmIF86FuzTtRBTVEPwKvT2CZywcCpKWQES4M=,tag:hy6kGCVmSkcAu0zZzDNYzg==,type:str]
           body: {}
-          timeout: 10000
+          timeout: ENC[AES256_GCM,data:Yp2XGUU=,iv:/0QweqdsmTHht/Ma3HuQWUzHRF0R138O0ApwPunF8xI=,tag:r+gcYaMvQxMOsE2HdFmGtw==,type:int]
           headers: {}
-          method: GET
+          method: ENC[AES256_GCM,data:sW2O,iv:4Y0f3pWo5cmlqJIZnIw4M9y9Fnk7sYZ5gEwrlAZnegQ=,tag:dNn7F7a9U13Pe1wRjBaG1w==,type:str]
           alerts: []
-      incidentThreshold: 10
-      recoveryThreshold: 10
+      incidentThreshold: ENC[AES256_GCM,data:HmA=,iv:HJTukuA/OIEDBK620IyAf5TG8SFxyOt/zwaRvggr3a8=,tag:yF1iJH/piUfoWlUAymzvLw==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:kH4=,iv:prBWXbhrBUxUK2PSgZD9ud0MPy+4Lq0rzg4XDTGiWS8=,tag:egch0EKTdBbl1888mYCL+g==,type:int]
       alerts:
-        - assertion: response.status < 200 or response.status > 299
-          message: Target is not healthy. It has not been returning status code 2xx.
-        - assertion: response.time > 2000
-          message: Target is not healthy. The response time has been greater than 2000 ms.
-    - id: "20"
-      name: pve2
-      description: Check if pve2 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:TU/1vbbIGWYjSvVMYLMDLgGcUdRaeOJGuR2SNvqUg0D1xlZdYz/b6SNVtGcZbA==,iv:SDfcE6xr+wPmbnRwOitsoELaLpsNWF/SynDcRM0fixI=,tag:PD7C6QHXLAFF51zwqDS3rQ==,type:str]
+          message: ENC[AES256_GCM,data:tYc758Bb3vv5FL6YBRztwLx3UH0pkaFKOaWZ323Be6n6aNcVseG8UYgE4A3iBH7iwf/SmBmcTuRpwoNLvopMa4g=,iv:dSA3TEo7wyP1yBUzahjU4upnCiaZpvDv/Q8pmoaO6Kw=,tag:WWQ1NTYIWLgqQberDqWl4g==,type:str]
+        - assertion: ENC[AES256_GCM,data:/CttKJwhU4Ychled9XwXoR5RVEw=,iv:hCYiN4DgtMARmI6kCT2b1kMSxUi0rJkr+Xi21simH8M=,tag:Nv+ou1RO4KR+R1HsVc/bxA==,type:str]
+          message: ENC[AES256_GCM,data:a79CzfDkTrZ4tH7NqBkWl18nUrQ/ze2XfmLy2XVB9rWS6oVW5DBr8bw3QrSv0iILI+JpBwYRiCq4teznqPuOEH7GUwmPx+E=,iv:WHVTUArFFSjD/GvZQeC2EeT5uFt+jMaq6ecCodETrZs=,tag:DiSw3xcLtuduFbxJ3K5DKQ==,type:str]
+    - id: ENC[AES256_GCM,data:AwI=,iv:vBWL6p7Hcu8vul9aArj2UeSqernqY32yZ6mV+/nw7jo=,tag:xuYz+t07CxUR9W68INlT1A==,type:str]
+      name: ENC[AES256_GCM,data:zyE5tg==,iv:mx72B2fJpnIrqTHM49VMTLvy8bTJq025tHuR2rnk31Q=,tag:UG25tE3O0V+GjLf1HMFqOA==,type:str]
+      description: ENC[AES256_GCM,data:lQFEWYa6LKOs5HmIXzwktK6gHg==,iv:i+vhoq/+ILcw2EWww36FUJQVOb3Sbdh/4mYrf3I7AAo=,tag:iiTS3BZtJO6zjhUAvX/V6A==,type:str]
+      interval: ENC[AES256_GCM,data:cf0=,iv:22D90WxUXNB7ZdoX1zWDwV2tR3CXhEi0QA63h1MA8b8=,tag:s46RQHVLvf54aXmtlb9pZA==,type:int]
       requests:
-        - url: pve2.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:3aYDN3EnApHbTjVxpuiDx+Kt2Mk=,iv:pqG+tRrBUoQD86+kOWKNmyoN92nKX0bfzV3fDSIlhac=,tag:ggwNFL09TMzskFJtfDwU3g==,type:str]
+          ping: ENC[AES256_GCM,data:uLZMXg==,iv:dlWpec5KltSPq+sLkeZkHxHU77TVF2FWxd9cnfGSWp4=,tag:fYZbJoIc9eOyRxtPs9ZPgA==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:7R7mcRkCnUX9+t6OGCtxiAlDczFa8A==,iv:xDtavtxyNegYOui+AF5O+c9NyfS+DA3iic7e7xrxHOw=,tag:noT0uAEg28HL5ra2rbuSgQ==,type:str]
+              message: ENC[AES256_GCM,data:DSfJ+8S0JBXu84XpNV0eiusnErhr1Q==,iv:YpnZoDEt15UjEg0WKxM9EEcIvPQeAY8fxEqVU2pImws=,tag:kIsvQZEQYUlhyOxUSCTrSg==,type:str]
+            - assertion: ENC[AES256_GCM,data:P+969amnds9SI2IABpXkkEcHyaI=,iv:pPsvriTDv991n7U2P42pkneLti5s39J3RtKXJl+CvaY=,tag:BZ6jVvudUeq9jVIVB3B3Qw==,type:str]
+              message: ENC[AES256_GCM,data:ZXaolerNRIgwiJPVg86E6z3w/dnJcGpGXbEY6n/pXMw=,iv:zkrPkazNxhupdD7iwlDdKGYXoGQ2fepHeH61Xaohyoo=,tag:5anSZwju+LEgn7Osfg4GGA==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:ToI=,iv:OSttS1X2zWrXKucRe6Vjtb3D6bZMfgrBbGPjcgv9t2E=,tag:tT9saTFL8xwaMbyLNdWh6Q==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:7og=,iv:ucWxepbWDLL8sey0nqOd/xWsoa2o7r3xdhqiz7scWYs=,tag:2X0VJPXCp+OFNDHB97H1eA==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: pve2 is down
-    - id: "21"
-      name: pve3
-      description: Check if pve3 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:eXwt8DW5f2xjZZ+YlLcM5ksID/5fBg==,iv:QMXK/5vbpeHFXx3MAFxMaDlkiXV++QbhQYOKSFYdgyw=,tag:YnMi3qm8BeYGymU1gsVOFA==,type:str]
+          message: ENC[AES256_GCM,data:v55ELffMnI7UeFdt,iv:0SHZoXhxfloDHr/rlAbWA/oZc8mz435s2kXTYZbcJAk=,tag:AMkiIEFfk+GHMhOHJ3whaQ==,type:str]
+    - id: ENC[AES256_GCM,data:hM4=,iv:+BBuzFU5rEJOzhiXi8IGJjwNrNKYaxjkbVFAQaZV/p0=,tag:0iW6modLxcrbahRVNYWfXA==,type:str]
+      name: ENC[AES256_GCM,data:Bkuncw==,iv:3uWYrQer3xM7jASlZUnXRRvaXygQa8W/gI+LxJQ7ezw=,tag:que25AKzz367orJHpEReqQ==,type:str]
+      description: ENC[AES256_GCM,data:sE7Kdt75bWPROq7moBRtaoIcgQ==,iv:tv3FDEdhKdwBo5DNLdaTxki+VOul10dUX0wyfJLpkrA=,tag:EqnrA6DVGeNctNMrU25T2A==,type:str]
+      interval: ENC[AES256_GCM,data:cCw=,iv:WRwiih2AYqYEYXoPOWH6CiV8Cn2kX1xHgE2YWPyeM5k=,tag:4duOuude9XBFNSK4ZJ9egw==,type:int]
       requests:
-        - url: pve3.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:hjGTmD9/H6PvFiQjJCy8DPV3Os8=,iv:Oz23EiXdQSRj5mYMYLlS4xjF0RI8u/r+z+uRJJ2K5gU=,tag:rMWX9yfLKMnGktZqTlsmNw==,type:str]
+          ping: ENC[AES256_GCM,data:yzFgFw==,iv:HDes0yppheF8juKXPqaFmlFVKOxbEq0Ji1iYjwJoQ+8=,tag:UHh9kp3pclksynoK0Fu48w==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:h3it5KuGxM3gUo0tviC8nK2wiazRYg==,iv:siygkHVlA0Yh4ygpZYEc0Y4RqXU2jR+h2G612hOMiR8=,tag:hi/uyjyxG/BMi2Oz0z6dzQ==,type:str]
+              message: ENC[AES256_GCM,data:shkpzm3pwu+EFAe7pWQQEzo70tK8/A==,iv:I56Hvr45eC4e5IKLvs65HH8odKsePEAAE5/6PmYrDiE=,tag:JvZxiZPUI0p73ZNkUVn7mQ==,type:str]
+            - assertion: ENC[AES256_GCM,data:nodE8+JgQyJm7EGGW8RLYf1P3xg=,iv:9rd4gqdG9yInUgIZGL5QJp8qlM3Q5jNCND/QURRZbHk=,tag:sD2gGowFykmPtglHwm5znA==,type:str]
+              message: ENC[AES256_GCM,data:AUFiR6c4ePXzWIhu4FEbTJrTlUAN5weIqtgd9YoUs7U=,iv:Y2UwnJRnB9xVUBKVRLv9Y3eJkUOxLORWgpC3kQe/UE4=,tag:vv/fhFlZZGvV2NIhNKqXLA==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:Wwg=,iv:WjA1Wp/MicKbwn73u31nf4SZ2ch+bzhc5i30FYZmiDQ=,tag:tvaYA4+X/p9aKwpVBSE7mg==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:pqc=,iv:ROjGuOmxjO2jj5g1AD4/x8liZvbcfq/SYVV7dShvFdc=,tag:+PFjRuMAoRvDbHRmVld0Lw==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: pve3 is down
-    - id: "22"
-      name: raspberrypi
-      description: Check if raspberrypi is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:ZuuKnYfl1a0CPXBhJwwKF2NK+NiGsg==,iv:9u2w4RTKmkcnqMuER/KUnotYDr2jsGBxpKBTe3atupg=,tag:GgC5I4aMmWqxG4c442Cu0Q==,type:str]
+          message: ENC[AES256_GCM,data:NyNEqvUFhqk3lbjs,iv:EitoRPPuXsgmqKy+XC0NFvh2qkpPNTOrWbMZ+TrJib4=,tag:27MAWzHvLP/FgYyx+FbLkQ==,type:str]
+    - id: ENC[AES256_GCM,data:Yls=,iv:aMenuZwc1BXlX9cIOmQWiCu7VyuLcFon2HsW6huXEjk=,tag:Ky1rGJOntG2TOXH8AT/UXQ==,type:str]
+      name: ENC[AES256_GCM,data:veOc6OE0tPVk6As=,iv:dxqbsy1tYVq98msWGO2z9jY94+v/TSNumBIohDvkzxg=,tag:sQhGHymnNZgm7Zs0rcfvjA==,type:str]
+      description: ENC[AES256_GCM,data:1H0wt1rpfkK6SbgMfTrcrdgPPjtIRSvZbJw=,iv:T0tL7ok7LknecdJZc3xfU4iVAPTYnmivHX0ketvinyM=,tag:sxcKB2MLmt3Mo8QidgW6Qw==,type:str]
+      interval: ENC[AES256_GCM,data:x3E=,iv:8+K11X4cQ9PlLBCswphr/yvBhuPLbBBD2WLTrtnfVM4=,tag:TEQkuwGd7q3FjC5o5WOecA==,type:int]
       requests:
-        - url: raspberrypi.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:meWISvC5bP0/2/zfU21pw1rBQo71m2oDukIc,iv:CPKpZpg0gYNkfxLgJfM4+jjzPbX3oGRAa6P07M87zp4=,tag:YBsxespB6Yy+uhaPX2avbA==,type:str]
+          ping: ENC[AES256_GCM,data:/4ycfA==,iv:ubVNcX/0A788fJPKK7ERHhZMqTHayTrtoSIMR4JZcao=,tag:Yvy8V9/6L8hTdZt2vXxzmg==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:uSnQPaQzMxlF/tbhpk0OFojcN/xbWw==,iv:xkejJfH39gaMAMWebWZRvk7AXm4wcMJSfQD0Idj779U=,tag:7eyz6umT/LpG+I6QEOOEig==,type:str]
+              message: ENC[AES256_GCM,data:SaAccJEGy19X1a5ld185Hjsw6M8wWw==,iv:AIv6c35MhOOZ5K0zIn+21/KSek9V4/J2Cmlf8nvu4SM=,tag:lM2ngeJuEl5+Se+qmbiTjQ==,type:str]
+            - assertion: ENC[AES256_GCM,data:rJS/pP9R3/czfzd+5xFCI9uslHw=,iv:JVW5Z1k0P+uI1A6vplQGHJBysuuVdx5CQDh9MXp2PMk=,tag:Vrx3yhUtUBP+gWf+VA8MhA==,type:str]
+              message: ENC[AES256_GCM,data:c99XWYWDt8DE6ff6Tj/JoJWNeRNn84uXE8GcRuwteW0=,iv:JBi3+Lj6zz7KhVmM18lUTW/XM8EnYHRn833U+eMBGew=,tag:DWb/9TAkuq3Hiaakm3Vvjg==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:L2c=,iv:I05s9XKZdUfvPWDRDbX0MVVeSZ2qP3MwJZ5n6MrU7mI=,tag:Srg13BIfbcxg9qA9rsbr7w==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:X4I=,iv:8wJ7byRRxex/QwXRq1DGbHJRBkd+m0IBEJI2P5jdq5w=,tag:WANTZrb9A22X9dfZINbVwQ==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: raspberrypi is down
-    - id: "23"
-      name: subnet-router
-      description: Check if subnet-router is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:ql+I6TmSapWJVJ4stSQdWRVfxzfvZw==,iv:DVnyfPW02aZdKcdmWzkkrWXz9BxmQyKVCgR258rUVXg=,tag:WEyZbyL8djv1kqP7bwQRog==,type:str]
+          message: ENC[AES256_GCM,data:ECvYuAPsyHAAufXqT4xQWfZ6EQ==,iv:mebFCeRMvoCYRWRtTfBKD4dZlltdRb3RSVNam6FT0YU=,tag:TIg7Gk8M2m/OFvR94vECZA==,type:str]
+    - id: ENC[AES256_GCM,data:FUg=,iv:EzEZCTHEbxyd3b5/hsYV9jKMKKd2U8vUepT7BJB8F7g=,tag:r0EVa6I9ADJslMhIjkKr8g==,type:str]
+      name: ENC[AES256_GCM,data:xT670U6vSHnlCWFVZQ==,iv:oDUjTmB0ZdQCBSJle17r5JciO9t5gRha9UhRm/M3CYI=,tag:P6WKU8ahEUmA1PygBrnQrg==,type:str]
+      description: ENC[AES256_GCM,data:Vg85EH8ABdb7p3UlsxieIvVMpLa/QQxwxswMog==,iv:DhvG5L3blJwcZ3aBXyRIQLtNc5hWoIcljI/gmTIOQU4=,tag:zLwzV9yMs063UB4WAYpl4g==,type:str]
+      interval: ENC[AES256_GCM,data:vsg=,iv:z+JilFGPkwubZ9uU2Q/yHKt7RT5LZmmqNovzZx2Pj4g=,tag:LqJy75ghB4QqhyVoHIN1AA==,type:int]
       requests:
-        - url: subnet-router.tailebee.ts.net
-          ping: true
+        - url: ENC[AES256_GCM,data:rgDAYA9ByMxoDj+3jXf3OB2V79T64G1agJD2f88=,iv:Y2wtoDK93pQWlHn9YPAzQFdxV/sAEcIoJgbGFmeQsJg=,tag:3LS/9l+gy42Et8Z1eaP6uw==,type:str]
+          ping: ENC[AES256_GCM,data:RHJNiA==,iv:U1L0QRLVyYVNUy/zyGpy8pTkt/Uu9I7UraNKi9PITAI=,tag:HK3x/FReaPJMo9DGiqUXSg==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:k4drLMPxTiwymsm7vmFjkpOs+KQhWg==,iv:fkO7K+hrQxTqwIkkErwjWatumQ6bLxAP8GAiHK+cZUQ=,tag:lFjFkLp6Fu0XUR4kBRBJHQ==,type:str]
+              message: ENC[AES256_GCM,data:n7EJdk3gsoAnhazr9z9qQgUZCFpJdQ==,iv:z8QCgtyHsHAgZ2WsbUGpoSk5V4HRsRHRIJP4OwJb9dA=,tag:6U5qrWFjeF1ChYcT90uPCA==,type:str]
+            - assertion: ENC[AES256_GCM,data:DpfO9eKvousaRTQp/dg2l7RFSZ4=,iv:aIvbUB+2jMtQb2G0lHdROmY0FJPZUYyJS38mbzytY68=,tag:leRBMmPHAsjZeqRf+YCyeg==,type:str]
+              message: ENC[AES256_GCM,data:X9vf71fRcz1ip8VR8nsKBmi9Zb6bMDCY/9LKp3hJhiY=,iv:nAkKiFw1ow/3JdKX7mHzkrQ3I0oRppbedzo476fzxhk=,tag:TYnYpttMkFNkvFN1kSADSg==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:vFQ=,iv:VosNsPJlhDyI8CpLemG+9ZJGFljJThFcVBhgT7J2TXQ=,tag:LDkrXWl7yB0EwSFHPXFS0g==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:iAs=,iv:qavzGymxfDspi84l4wkaW1vntrFOs8Nuf/YFnkffps8=,tag:a9rVj/BWMhxLBZjIb57TvQ==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: subnet-router is down
-    - id: "24"
-      name: timothy-hp-laptop
-      description: Check if timothy-hp-laptop is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:iO2Gp3FPa/12GQup6ySzOdkuDak18A==,iv:dwbJXOuM6/5UJey2DYNgfYJyUPt1UVlOJD1BfcJcWpA=,tag:h5ihrEYMMynPlto+rPw2Iw==,type:str]
+          message: ENC[AES256_GCM,data:rsr8ic9vEZ9Bq55rwpki2qg3v4aw,iv:UtjQLW+DLhaw/EwWwX9Ihp5LS8ktWIf9u9B5bvCDaP8=,tag:PsvhtokoqVCqsUNwOiV36Q==,type:str]
+    - id: ENC[AES256_GCM,data:FMM=,iv:OPGxaThWPOIHS9SonnIeRS4HJ9iKxwpeDmhAuHqAPDs=,tag:B6iVdSCvDFWgTeI8wVTEoA==,type:str]
+      name: ENC[AES256_GCM,data:DPETs/fx56yT6AA/z4ilf00=,iv:lB7R/L6U96a2jIPjn/FQeYtfy3p6/1/wbWhhnG+nEwQ=,tag:83aBuJAB4oy4D4+XgNP1Ew==,type:str]
+      description: ENC[AES256_GCM,data:KyhkQ86ukTcMsgl9X4gEnzO5MGFTpsu5GXwXpkXPPrM=,iv:DcWKBEAadpU58y7mv3DTi1OGc8eLdjlopK5DYsqRQn0=,tag:/Q+5+Cs3DdysrfFVOxEwNw==,type:str]
+      interval: ENC[AES256_GCM,data:1uE=,iv:Mn+Tp+5Y57a7UqAcXivmQqATalsVoVYP6hYkmN4duGs=,tag:F7LFS+yQWkxSrEnM2x1Jdw==,type:int]
       requests:
-        - url: timothy-hp-laptop.tailebee.ts.net.
-          ping: true
+        - url: ENC[AES256_GCM,data:8YzRunLUj4bMYFJFIwZhcbWZEaPArohC54PZ7uybKRRUDw==,iv:NwsPYEb/qo7mVWmlPf/Xm7W89B7YBCRDYK9/mh7c9Kw=,tag:hGGaQlI9eJ5rWTLIO++SpA==,type:str]
+          ping: ENC[AES256_GCM,data:0iHN1w==,iv:/1veY4PO4TFbcb1PiwFtB2rRcYN9UOUVNNKJeV6IOUU=,tag:J02lWVNwq1moa3XgOvUtnw==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:fTdwQaGW9jqMUIm0LOxuFlEeIX9wkw==,iv:GW17ZAE12BKuRuy5L/g6z3jqr+7KX02OnIOW1K/oZ+k=,tag:sdUUru/RDIZ8CnwOtong7A==,type:str]
+              message: ENC[AES256_GCM,data:fQ+fSD9t8kGjVCS/nJbZ4bCRY8yzJw==,iv:VI4raWPB0Fw4O+xQexa8CsQo/QalzKNyS1mc+PDYP7Q=,tag:mhbP33+SuSYQNZw89HAlvA==,type:str]
+            - assertion: ENC[AES256_GCM,data:0KvH8U8BINTOpEOR04dDX6lUkzg=,iv:B+OqnUl9gRx/MzzIcX5Ru7gU5U1lChOvt2SPkReCbfs=,tag:tDVbXd6IYRhSMtox0jaWZg==,type:str]
+              message: ENC[AES256_GCM,data:K3DGyoa6exjWQkBleSKbHkN7qjBqlEBLTDr2us5jhW0=,iv:Qy0Hp8h/6+hourX2pMe2dg+aBWI8qFNGFkdvArlg+VU=,tag:34/gt95p2+EL7WwAqkGBvg==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:mLc=,iv:LJsAvpS/tkptEey70obA3Kd4euIElVEIZVhFHgRS2Pk=,tag:SPbMGYeYl2X1lfH2EkJT4Q==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:9/Q=,iv:7SXftiLntLNxkM0V28AUfFD64s6XAF/vyKamHk96IcU=,tag:PTbbNBKmEukdX6HmlWYl/A==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: timothy-hp-laptop is down
-    - id: "25"
-      name: vm303
-      description: Check if vm303 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:XuNcfrDDzrJi4pbluFW+b0EDx8W4hg==,iv:V2oy8c7w7RcjicCvn0N3QlbZ76KUhEFzCwwxZwS8iPA=,tag:AdcCdACLZK/ZMOJbjrwXMg==,type:str]
+          message: ENC[AES256_GCM,data:FtG9FbgD3m7dz3h1XysDPdh0JGRLHZhiHw==,iv:7vb7kvwyr7b56o2cLTp/Qs2Ah6QE3S7FjcWmr4pXjr4=,tag:Gg9nzYRoLkqwcM5KSV4LrA==,type:str]
+    - id: ENC[AES256_GCM,data:v94=,iv:OIEAr8+EqltlPNUsbimYSqoCxKSoXZRfiwCNED90xbk=,tag:wO1G4XPOp1LKAEYl6DwdFw==,type:str]
+      name: ENC[AES256_GCM,data:y5S8Gcw=,iv:VQl7OQWOelmMrQ9WbRWduSGa/HhyFaBFkk1g0weeSPE=,tag:z5Sl2tCKtXyuUIJNfmgU7Q==,type:str]
+      description: ENC[AES256_GCM,data:vdgzBf6WVlYh4SbKRqqf6o6MNj0=,iv:0DO9ioMfIA7sS94xIgflQ5C3opKgqRO/EzMZkvxrH/U=,tag:T1o+0g/L72f966s5Aggqag==,type:str]
+      interval: ENC[AES256_GCM,data:CuA=,iv:ofMTYr2mvMJjlSyHP8Ruv0YmncPJtJOpSMGeGhkJabc=,tag:/fWMXYJO7GHdBoNr+2JGVg==,type:int]
       requests:
-        - url: vm303.local.lan
-          ping: true
+        - url: ENC[AES256_GCM,data:jndGs8ZHaKWIBlFwGIdl,iv:8PzVia7Talm4/3UjkmtiNJh0QSKDMpptMxaXxbYNNrY=,tag:QKmpSIveoLCpUH0xcB/+lw==,type:str]
+          ping: ENC[AES256_GCM,data:1GfzRg==,iv:GOt9OlFDhTm5lfuSx2DSnvl1nC8QH84ij0mehaxlTUs=,tag:9jDccOIPc/ZpxIp5p5B2QQ==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:STadJYjvxfbNe6PocoW/GYnOgNgBbA==,iv:T0+9twNXWeotMSfqNyM7WftuPWvloTfyYwQZfpH9298=,tag:Gl9wCXX8GGJ8D8qwDr4Fzg==,type:str]
+              message: ENC[AES256_GCM,data:a4oYX5GeCiEoHLi43uzSipFLIIilWw==,iv:fE1tC99ZCxD6s1SEVKv3COESfMbi5Q6+AKMHAqHLkZw=,tag:+rfhpX8Zv2tod6Q0TlTu5w==,type:str]
+            - assertion: ENC[AES256_GCM,data:N6IQFoYJqTvsFH933HcyQhlhnNw=,iv:WcfFlQHAl+eTgG5eIVrYz0a+/YI1vOlOnrp8K1R8l44=,tag:f2UxEEbg2mO//mcJoFpuCA==,type:str]
+              message: ENC[AES256_GCM,data:c8SaSFZLS4M4/9gwKHunUS/0aSKh4OXrIuy9OZaDDGI=,iv:wtiPKuV15uLl7e4ktQ0o2nsjXVD95usrUQLcr+oHi6k=,tag:rvHOxeeBTtHUHiLRmqc9nQ==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:Eys=,iv:g/Va/9i/yJhRBeyB7tQaDi8rdn6BBV+13MeFlVCaGmg=,tag:BOVCAWHpcXV2PLxKr1ETHg==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:D8E=,iv:fGoMNB3zFGOuVPDETyL7cPYioUb+TwMAGNttHWX9hjU=,tag:uZ/xuGX2e/JMGBd28bq78Q==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: vm303 is down
-    - id: "26"
-      name: vm304
-      description: Check if vm304 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:b/1Mcabhs5VmiuSaa3gyCqH+LM1ELw==,iv:pAfgH0OSYn7KJd3Z1X5H558M9Xm4oqvZ/UvK40v9FIA=,tag:MjsWJl8jd4LtX4xYypM0Xg==,type:str]
+          message: ENC[AES256_GCM,data:63taNncM1HvZLHWdRw==,iv:D8arTCe2TDES9qL3SCrQMVyVdwesiVyAL/rpA5mvhtM=,tag:rcC1vVv4NNygi4DttvGQrg==,type:str]
+    - id: ENC[AES256_GCM,data:A1c=,iv:on8nKA/oP9PtbE9tWAOFhsYAODsHgqTOnrIyd6PtgKc=,tag:LjhrE1DsQ+9Vj5joYjQgcg==,type:str]
+      name: ENC[AES256_GCM,data:3H/E0mg=,iv:LC/VJeZlXMoH/OHX76aTGUitAz+p30iSWdh+IgEQRU4=,tag:aFC07M2Hza5qA5358hHo4w==,type:str]
+      description: ENC[AES256_GCM,data:qwj8frhMow+DdNOqdRWVDqTNqjI=,iv:+QW1AfWF+58KaTr1ILdaRGUoJ40qvY4Fhq45CPfmW+M=,tag:mN+yABhoAKDHiuV0Oq6ztQ==,type:str]
+      interval: ENC[AES256_GCM,data:Pfc=,iv:uL5hxcphIInLwFMexp3WbWsREHE7pq6dhVX+29odQyA=,tag:nUjP2OK1jkvxhgiRCpRFeg==,type:int]
       requests:
-        - url: vm304.local.lan
-          ping: true
+        - url: ENC[AES256_GCM,data:01U+fbE0pgFc1/9L6Sdc,iv:ezndu9zKbegLsqBODv9ff8hJ7XXhLx49dR4NNCh6ti4=,tag:6TgTwHPlfIhamlTShtZItQ==,type:str]
+          ping: ENC[AES256_GCM,data:4MgIoA==,iv:q7SpHyv5r4ybO8h0i7xNAVxh2lFjNcZCwQHeDjn7U1c=,tag:aft7p8uY7InybtH77zy80w==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:zRhx4+l/QOPMLVyxMlOpuUAaaA8T1Q==,iv:jD5FeEmxgEJBNxqEPODdnrGAjqjaDuSdLjAaCCREGmw=,tag:tm9wTSre70hfUId1xAV3CQ==,type:str]
+              message: ENC[AES256_GCM,data:IKrTaU8b8RWyZogW1yFwBlhMp9UjOQ==,iv:pvTloVQi3OV0TuyhTYQy5ADwTQ7cveU9YkWekDCfEnw=,tag:xV9u94UoBWkIpySRVl7OXg==,type:str]
+            - assertion: ENC[AES256_GCM,data:DEVGmWWM1pWLHADjX6T1jdFNP7A=,iv:uh8yQPwdCwPwKvKkAAnLATtCVHzcEEDHDKnaM7hbCBQ=,tag:GVotx72lbHRmQ3zJbe7EdQ==,type:str]
+              message: ENC[AES256_GCM,data:OFT3JNyUATK83xIglyPQ4IHPZbnmViumkkq5ybiwUB0=,iv:gJp6dQTKudm2dk4Hbb+jj8y+6acHNvYowYNhUdMQeKI=,tag:EMD1272CIoYeQppmk4O3gA==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:4B0=,iv:6pnG7lTX8a+WCIUSlhfDWKCVhiDoaWJ6aC1/xi7OYaE=,tag:ft0vV700r4uYI2dYw3Vtkw==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:lMc=,iv:hvX5fx1uCkZ3f02BqrAko6I4lx1apny/juWVChYsbFQ=,tag:hXlE1dSunyDMSGp1sVRg2Q==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: vm304 is down
-    - id: "27"
-      name: vm305
-      description: Check if vm305 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:diOweILGFdYwYSM/ScmVlbEyuthQbw==,iv:G4PVF1bwUOGjI9nZhYrmzTNB1o0tSFFofo+HfL1rvEU=,tag:flWRI99dJtXRJimzQV7xbw==,type:str]
+          message: ENC[AES256_GCM,data:Jff1uEQwOtMml6+tzg==,iv:H6FZIzBSxWscDQZ0UfbCMONj0IbtZKTUzZ/GcJLa9l0=,tag:cx3U495dkdwf1bv3icSvgQ==,type:str]
+    - id: ENC[AES256_GCM,data:Nzo=,iv:BBvwG0JfvYaUi7RdYc7ypvQKhS8eqzprV4LdRqwaP/w=,tag:Eo2FsZ/Yq+OTun/Xus7Ksw==,type:str]
+      name: ENC[AES256_GCM,data:Hby6ZSI=,iv:0NJYPKUaNylJBSJFTCSykadzfWmFCY/LEYvNOz+ftxU=,tag:snjgCROXMsXijR6FM2aI+w==,type:str]
+      description: ENC[AES256_GCM,data:pXkZ+lDCrtAWBJ6DZNxg6Vb0qPE=,iv:A2WtmsTO//7XVAN6LCfW4WUdjGKwqbCdp7K317cJOT0=,tag:2Q4XRuz4+CNPXSYRpicX7w==,type:str]
+      interval: ENC[AES256_GCM,data:p/Y=,iv:NI+uiW4XIA86FFUFxH3ZPJfhrjfyB0O042tlBrAaeEs=,tag:8WNJAu8eLlVyXBPVHQ+T6Q==,type:int]
       requests:
-        - url: vm305.local.lan
-          ping: true
+        - url: ENC[AES256_GCM,data:4i48vy1Uipqa5yRvGT4r,iv:jkYo33t6aXlZ3WGogEOJnaVZKCa23a2SQodrCFWl8Hk=,tag:4kCUJ8Yh+xHjI8BsoTQWSg==,type:str]
+          ping: ENC[AES256_GCM,data:/6jdvQ==,iv:jFbmaOTIb5+z1ZaJ+gWhJKskyLvevZPkW4E4cErc0Hg=,tag:EnT+TYNRMbJOAlbMeSXCjg==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:3rravmF5ngPwp5xkrGYu2MbfYFUTeg==,iv:wJ8xwMWNnscjabrFEHfXkjiQIVg3Qdr1PzhAvnoJRIs=,tag:T+w8CT/4iZKg47zO5GaMuA==,type:str]
+              message: ENC[AES256_GCM,data:vTOvuk+Izw+DxaoNNrbVXCrOm3mhJw==,iv:SS1G8ZGaQT/OO2gg2kJanBdvzX5y4SUG+2A7IuoCvcU=,tag:fVQPMXXmj5DYF1Wl9Cgd5A==,type:str]
+            - assertion: ENC[AES256_GCM,data:nf//zRSUAhgPV9woX6hhS/WkGAo=,iv:h/IRDkJnw6o6QiWZTTTDhXh7OqkP0NgY25la0kVPPSY=,tag:UOtb55g2wUkOOr2Kn0sGyw==,type:str]
+              message: ENC[AES256_GCM,data:E08STPPTH3DflIU+fuo6V92Uj7Qnf3T6P3/UjqBfXyo=,iv:52bStGQPB3VMnJQnS2KoO0H67o24nkvsH9OT8O0MJOs=,tag:DAxKVartUlFDNXlx2OY4Ew==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:VYk=,iv:eVQuOeOxw15TuE1WFtex/mQQh8MHIi1xsQ4bEyJsj7M=,tag:igZJ+hrzqQ+j8nS8bvdRmw==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:09I=,iv:Na26IU7ARag0rFDqcMc+CK9w6TK4CfXEmdwkjKxqtlU=,tag:16HMahBM5BIZRJPt6cicxw==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: vm305 is down
-    - id: "28"
-      name: vm306
-      description: Check if vm306 is up
-      interval: 60
+        - assertion: ENC[AES256_GCM,data:EJMUiTLQioNodN/QmJd8bEucjOfpAg==,iv:DkufPOO4t3GXDLQ1zY37kPZY1aTPFXTbZmyvShgmrT4=,tag:g6PO8IQjTNibDBIX2ueUIA==,type:str]
+          message: ENC[AES256_GCM,data:g8R/FEx8ltCorwpWXQ==,iv:3CV7D4RhSQjjyNtzeXXfAuCwMdi7bBUfuc5Ke16lb1M=,tag:4Gl8++2Kaa0SicstE7Yp9g==,type:str]
+    - id: ENC[AES256_GCM,data:DOQ=,iv:JlSs6uBXqKcKO6qixEKXLpfPPZL6f5gyNy4uh9fiRA8=,tag:26MV3JEfLynizhrMrkYfeA==,type:str]
+      name: ENC[AES256_GCM,data:3UIWDFY=,iv:rfrryk2jxPSgRm3sRPZDeoV5ry14CZ7D+cji+/7k5eU=,tag:XAC/EifS/RE2pmF8XaIx7g==,type:str]
+      description: ENC[AES256_GCM,data:71mkM7R+JWHYvL+MLrUJGqNAYnQ=,iv:mPlc26AXVfVp6bEEtjHQaBXo2yljcZZXvymBAuCbprM=,tag:rwUX+O6ZbUtHlkFJzp41Cg==,type:str]
+      interval: ENC[AES256_GCM,data:Yvo=,iv:T8NJAnydBn7sjJHsqya0H2sFtia8D7X4W0oaP32BfwU=,tag:uNCgUAXIFhWqpNea62N4Jw==,type:int]
       requests:
-        - url: vm306.local.lan
-          ping: true
+        - url: ENC[AES256_GCM,data:NYFPhutOsXG1s0ezs/pV,iv:of/94SXyGvmwSSgl9E/R1wlz/2C/ql9esK9M3/T+Gnw=,tag:XIw+YF25QnK2MTq6vVPlhA==,type:str]
+          ping: ENC[AES256_GCM,data:CDGY/g==,iv:nfqJO6q1I6qZfiaEj+PBfnv8rynnScOWcPgY4q5f61A=,tag:M5OIm17N17jBoTZPwKbhsQ==,type:bool]
           alerts:
-            - assertion: response.status != 200
-              message: Status code is not 200
-            - assertion: response.time > 2000
-              message: Request took more than 2 seconds
-      incidentThreshold: 10
-      recoveryThreshold: 10
+            - assertion: ENC[AES256_GCM,data:N4w9UEwiD/buNPgEjDCoHX/sYLpPiA==,iv:Y7Bg0JNV0vD5/CFOdOguHcDJV6hdD5vCyMQJOa0c45Y=,tag:EbEbRdPM5gkfWDAYw8SwFQ==,type:str]
+              message: ENC[AES256_GCM,data:ux7nq/6Zq38vAX7Lo8kdqPwFc+D/yQ==,iv:iujj36O4FzCE0IuX5e7qphffdm+mbmeKE/TcQlk5WA4=,tag:uOt1gqKV3uA6K5FiqJDPdQ==,type:str]
+            - assertion: ENC[AES256_GCM,data:anDdXniffukpb+mziB5BcwDjphQ=,iv:WCJHMWgrcLDQKuWzf9Qk1Ro+wFRRPc3tqp57k7nphU4=,tag:k8gwM3om9U5gp5/rmDnroA==,type:str]
+              message: ENC[AES256_GCM,data:4Zj60ml0PyPFppTiqPv9UfvFtD3LrRxCopQhZZfmYLQ=,iv:Hyy22pIYXScN1v4N72PqUgJEZVarlnmU6i7zXLlaqbU=,tag:xIiRfnzpugae2pj6ASpxag==,type:str]
+      incidentThreshold: ENC[AES256_GCM,data:pZg=,iv:rrCznviO+mT/3cXuhBJnFMGQ0y6FGgsqQrOK55lO9Qs=,tag:GWYQ5QeSDlk3Vziufm11Tw==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:Kok=,iv:qiS8hHXV+Ak2WJdhzwZnAGDnl0pYvjydw6MX2Bh5OBw=,tag:OPux1wjoxxYqWOEDPpBgkg==,type:int]
       alerts:
-        - assertion: response.status != 200
-          message: vm306 is down
+        - assertion: ENC[AES256_GCM,data:yJJSUMf8OJ6riV8g8jKI5YI7WeEjsQ==,iv:k6rMBth5ETcQ6/QNJy4rAHSasA8ZuNmUiI+jKOw8tyI=,tag:ZhUwsNltLG0rmWAbhzJyLg==,type:str]
+          message: ENC[AES256_GCM,data:rqp7hxFC5Y6grZJ2qQ==,iv:DthfVSUg4hn37gXWPdZFv/Iyi/vdSpi0B7IqWwd+Ftk=,tag:UC7WiHNFv9A+nH6J8XKD2g==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -502,14 +503,14 @@ sops:
         - recipient: age1hhnjylnwfh0w6sxzlvc905ma8wa5pkspv9k2kj8a0d993m8h734se3jh7u
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA2WVNkS3VxeXBlWTVQMEJU
-            cDhGNHhiakxYNUNIbXd1alFEWkIvR1pGRjM0Cis5QndjWk5RenFDQUhpUjMrcXNa
-            b2NNVXhUV04waTJMUzhTbHI2SjRzdjAKLS0tIGJ0NnduYjdCeXB0ZmV0R3k5VnF2
-            M0hlOEZOMmdpcGRDNnRXNDJ5MkIycjAKsxoFfwnbSmPbnsTWbZarHCsPsT7ardPS
-            hX/4dAd7brRXdse+FYzel8zedoP2xlCyEXR8HXevffZ3ph2WGsqwLA==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBSdTdhKzJHRjgzSEJhN1ZW
+            bTZYU0tSbUZITDd4UW1aQ1NzTURNV05VZlZ3CnJtditMa0g3cXlQQnpWL0grcjBo
+            UmxLUythTTlZcGs4SW8vTi9CemU2blEKLS0tIGgySExQZG9ZNHBqd2hnNFEyODFz
+            NGE1VGFTYVhMT3ozQkJJTVlCT1RxbjAKgEPYdu5Rqctry4cR/gj3iNeC4bqFrDXg
+            Stf++sRZ8+U/NJvNKLCZCays4rCSCzJ34J9tVec06g/YyNrGPzhhpw==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-08T04:53:56Z"
-    mac: ENC[AES256_GCM,data:kTQftLgdE2ORRCnryjNOZQ1qZZk/olYxRb0RZ96vFBeo/q+KV9CnvE4BkUMWm05XwiObgFJUqWa56VQQhJ3t0Mg8m1tJsmeYeWCJx+9aSrv7nD04YgllYYrQVf6dD+5KpaMIqczrSFYs6VqTTV4xbbV+sf6gp4TRY+dXvwcsJwQ=,iv:VZsYNHdjUj3YF/qpDgqSw7xzj52TQhlXoUglVHyHjoE=,tag:65uG/B5sRbmBgCZBbDpTZg==,type:str]
+    lastmodified: "2024-05-16T14:15:49Z"
+    mac: ENC[AES256_GCM,data:DjLg0DwOTe8JldwmxzaGdeKajkln+UhWhHm4wd8rr46p0hH+yytppoKcGOPTwehfmQwY89CIb2IHRTDredBAZ86Pk5d+68BZl1RO2RUcCag9+oOek6BosIat7aXEWGhnZMk6tTz1DzpphC19jLn88kdH0BQdBEK0vU77od8tei8=,iv:KUWp310K5q/iSgVG2PVMlseXjIgUG7USpN2n8i/OU+o=,tag:VcH20cEU1CA9qf4AwDrH1w==,type:str]
     pgp: []
-    encrypted_regex: ^(data)$
+    unencrypted_suffix: _unencrypted
     version: 3.8.1

@@ -1,49 +1,50 @@
+#ENC[AES256_GCM,data:HsDUBL0q56evgHrUlzteoKOIaZ6ecQ==,iv:Ncil0S3R5dMCz7vPDIp2dDIhNhjc9Urkj4zwY+uDHgc=,tag:yFaXV1s9tEfarx91iHMeaQ==,type:comment]
 notifications:
-    - id: gotify-notice
-      type: gotify
+    - id: ENC[AES256_GCM,data:LBHXDOBDaiJ+sWvi/g==,iv:tVTCqERoHRS/OeurAToat6eo/ZE5SgIwsAiSU+23vUg=,tag:unXJHRnziXV73LmNs0ou9Q==,type:str]
+      type: ENC[AES256_GCM,data:K6sFOhdT,iv:gZh/HazPGimfUVAW+6/VDaAN52FoU72upNSV4VVEeSg=,tag:RqIElug1KWNY3+C9rUjXVQ==,type:str]
       data:
-        url: ENC[AES256_GCM,data:eKAv7kYvq6b4dBlUhbQvydFJYZ9qKGzOvEmGFh8=,iv:zdDA7DpLItKcftckZGhz2n0bAMSFiJ3ASElyekfpcok=,tag:OLEyJnYds8wa10+bcubucg==,type:str]
-        token: ENC[AES256_GCM,data:rscmHSho2XkBwtZg6ny9,iv:ErrkJXs/K3PTXuip3adzX3yDQoOp48Xd2JTWuupaw3E=,tag:axKt5vePjvrcGofAGqCWRQ==,type:str]
-    - id: discord
-      type: discord
+        url: ENC[AES256_GCM,data:7elEN988a/7go80p3i8hFsDhlW+b9RlmK7hwVS0=,iv:5ZWwg9HT4zrc2/jRwsygf3nEbFjNPFWiI3tIslevOVg=,tag:SaOq7RbDqwlenlj8t0g5Ig==,type:str]
+        token: ENC[AES256_GCM,data:GH5qITqkehsFz6WFQ7/V,iv:ZdZd3/hIymHWWN4094GT8pJi7OPJkcl9iJZtsu0Eypg=,tag:vLYkqNPWrbDj7l0tftqQrg==,type:str]
+    - id: ENC[AES256_GCM,data:XFUPye4R2g==,iv:rs4Rw/p0AaSUURMWkyaOXyBs4cKM23pmUGUHbBLdgX0=,tag:4ccIRToVua9a4uPhSXJnMw==,type:str]
+      type: ENC[AES256_GCM,data:oG9ukQOe4w==,iv:w7RTPn3Kp2ZG5fn77l7J0BdmSIr/BD3SUCJPKSZs0SQ=,tag:ieh0WbjGm0PCViS5AjXJOw==,type:str]
       data:
-        url: ENC[AES256_GCM,data:McnQlBv3SLrhL2cU8rfDj3/Qg2+CWYXnKaHrmMC9Y2cot8IG/VJePUGtBHpfWcydHZKDixrEOYLtFgudlLz9p1/VHRifM9lOPHr7bINii+DmZE5WUcjVwbB4wkwXBWBLLa4XPObgWGXIlF/bgoPxws0T1rd5FrkzuA==,iv:BMVHc6eMIQURxG+QRxQ/5i/DoxW558AbX5iIFdUTL2c=,tag:NpyqQm3qoKoUI92Q9Hdi4g==,type:str]
+        url: ENC[AES256_GCM,data:sa9UJLtaCZoUrU9T4+ZBGencijP3QRUz3TKWblfJEHlGN4dHLu+QTmJh0psLsXzre0Xeb3V7VnvH2Lxdtl2WJCOlezy0w3o/Zs+54RGeAJoMN573+vzXytS3bG7cCftysmGRYysWgnzd0H1wzouopsbvPBIkFjuHWw==,iv:ZMtkxEb4TswVOWFZrq78XALIpQBA50qVzfnCpReQxk4=,tag:Lgnth1Htg8+Ij3wLoAmXMQ==,type:str]
 probes:
-    - id: homelab-pg
-      name: homelab pg database health
-      description: ensure db health
-      # in seconds
-      interval: 60
-      incidentThreshold: 2
-      recoveryThreshold: 2
+    - id: ENC[AES256_GCM,data:tF+UIF6M1/T2xw==,iv:r+ScUUiQuFUfEUqAg+vomLlqFpKTUaPMBpz8iz7Eyjs=,tag:wgDZTlmpXcVcdOtx5U6beA==,type:str]
+      name: ENC[AES256_GCM,data:5w155khrO9LDt4JEpO3j9J621KBAO/47fQE=,iv:dujNJ+PUIdpFyDJ0D35cL5kmrRM+Lq4eocIzTRr3Y+U=,tag:UpelM0oCarfa90z4LYs/JA==,type:str]
+      description: ENC[AES256_GCM,data:jpTtt+nlrBhgizJsNCrsfw==,iv:wp5ygFInY5eo3+jgFSzJbsT3WoBFPgOtoDEuBZelsjw=,tag:KMH2HYAioS2SDbDOrvRj9g==,type:str]
+      #ENC[AES256_GCM,data:yRoCFYLBAbS6pkU=,iv:o95erN+A2EYHd5YCraR5Y4bKx6geNkcLiOEy82OCikE=,tag:6knfJXvJxlUB20NEFQCVGA==,type:comment]
+      interval: ENC[AES256_GCM,data:ZBQ=,iv:7SpkyEgl0wxh1qUMAoX9UxF+/AyS8lHNKkWuhK+AwvM=,tag:aY2OgnsLaJA/j2EJ+YXG9w==,type:int]
+      incidentThreshold: ENC[AES256_GCM,data:7w==,iv:Bcc0ZZqCtx3byJMGh4Pu72kMxp69g4kaVeGs4HWFpxI=,tag:Tt88YRtBHS8xd67O2m/4ug==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:hA==,iv:IeqsKlp3Ktavc/UiAeTplhoQkGsYlNzRw/cOUCeDx2Q=,tag:SkmCPSMPh61dE1hwrx4m7g==,type:int]
       postgres:
-        - uri: ENC[AES256_GCM,data:IFLWtaF4ePr8XHx0iyUETmA5S4aGr/9rnj0uTxXdN7nDFTcVHLmw14uH6npcPQtwhLS5s8sHCal0xAGOLiJP,iv:kph0z78O0cyTAidsNWQSnaq+Lipgoke5p+ChSVcFzIM=,tag:FcIljr2qBvvQvyKDZokAOw==,type:str]
+        - uri: ENC[AES256_GCM,data:wFR2rGqP3UbBai+uZN9O1uMyX2pnmo0KeKo67roGvSfuo85TIf8pgxuPbMY8KXf/q+TXLYt5Jl4jgu3wkqoP,iv:lk5mjAe7nTDqe3dmEBGy0x1X7f8bqWycLnzhNMtMAMg=,tag:UJc9CNPDpWnGBNhhltIeGw==,type:str]
       alerts:
-        # in milliseconds
-        - assertion: response.time > 10000
-          message: Postgres response is slow, took {{ response.time }}ms
-    - id: docker-oci-pg
-      name: docker pg database health
-      description: ensure db health
-      # in seconds
-      interval: 60
-      incidentThreshold: 2
-      recoveryThreshold: 2
+        - ENC[AES256_GCM,data:wGVgXEfEWI9AE3/RegRk8w==,iv:X2HX42vQbkXI+V+X33fw2fKHcTqOefEG6VE9LECRTKA=,tag:8s6FODx3wtHMu/KzgQtFZQ==,type:comment]
+        - assertion: ENC[AES256_GCM,data:mFVsUJyIOFKSiFBEwBGmGuMeloNm,iv:340k8IhUBeBjZY/yNXque6CbkTFwsv+Znja4YqnDJr0=,tag:LpNBaKfmRCreMBwZi2SP4Q==,type:str]
+          message: ENC[AES256_GCM,data:m01q5vO3/srdBTqOdhBbu6qp61aHWzojgazMaf5EFO502HdOxip1S6fgd9uxak2YSknoyBk=,iv:BUy5Vonoywq7xdzS4GyOKYsZr0CwWlm1M1YdXgrKJ2Q=,tag:lw09+1xV7K+GmNRXMaRD7A==,type:str]
+    - id: ENC[AES256_GCM,data:Vqq0M7iFcu4NsnhA+Q==,iv:FvciqsIVlJ7DqLi2zhm+LFOu1+4F+LpuciDesa2D1oc=,tag:uUbQYsVL0e8x1zFdlsVB3w==,type:str]
+      name: ENC[AES256_GCM,data:173lXxqaOhStc1zGjr9kJgfOq7Cj7Mj36Q==,iv:jDdLi4WeuSB+W2TOASVxAoq8vEieyFFYo5v4YPgdqCA=,tag:iIS11K5KE0HP4OjoxgQnZA==,type:str]
+      description: ENC[AES256_GCM,data:NAnDA/rhDeZHOH1E+H6gZQ==,iv:uABxvU53lA9oqgFIW6Jvg5QIc5Edw1ESaaoA55NVQQE=,tag:5Y0iAv6BCQRiHyl72531+A==,type:str]
+      #ENC[AES256_GCM,data:xBU6GlUyuMdpMA8=,iv:1E+WNgn1oyuLpDuTNPcJYcXajs+TOf8rZfvS2NK2p7A=,tag:awu7PAGJBe44uaAUrJcxpA==,type:comment]
+      interval: ENC[AES256_GCM,data:eg0=,iv:XAAjMPSRHCDbAnflIPqbf2+qI7Cuy9hWw9wrynMGAy8=,tag:GcsxXEbhCwCzjmXOKBZMpg==,type:int]
+      incidentThreshold: ENC[AES256_GCM,data:3A==,iv:GDs8LN+JJPxDS6tufcatkiCub9C3BQMjSPxpXVU6A40=,tag:NBH+IKilSOupFiY5/r/Q4Q==,type:int]
+      recoveryThreshold: ENC[AES256_GCM,data:4Q==,iv:MHXrZVoiSRGyaPtVqYRD4KVw0r0jADj8Ic+uey08+94=,tag:xvCd2AhSAgzYtqkssqkmSw==,type:int]
       postgres:
-        - uri: ENC[AES256_GCM,data:WjZ0jATvz0DTu8YWMGoc4igM4pBugAMmWPhYX7xFCAvLp8z6oPUIZpL0ybKQKoLQtmP5N3lYucySbk3dzw7eUI1fjU4=,iv:06A7vzyEVID0sI9AYCI8SN7102zp19Ot/iiJYxzOIc4=,tag:1f2leN03papU4YT+l/yM0w==,type:str]
+        - uri: ENC[AES256_GCM,data:PUr6decsBnoXwhIRpHIB1lxmBWBp593KstVEn8z0/rPFGDxUvHNw5ETe/VAA8HatlNrdsYwYY8aE7zvJvCIO0HRIBNc=,iv:5vpRKSZr6BTuocS1a6STHCjCVzhcZVsxQM+RfQRYoxc=,tag:ZzTJiFnas0jcagvS0O3w6w==,type:str]
       alerts:
-        # in milliseconds
-        - assertion: response.time > 10000
-          message: Postgres response is slow, took {{ response.time }}ms
-    - id: homelab-mysql
-      name: mysql database health
-      description: ensure db health
+        - ENC[AES256_GCM,data:clhuetWncS8kwxIzDb3kKA==,iv:6hWleBJGOXUU/TOY6KPg1YsmxBdGCSUN9RTOdZwneXo=,tag:lWYzVf+YV6PdjFbtfLA6ig==,type:comment]
+        - assertion: ENC[AES256_GCM,data:43PYaHO5o0DfLyGCAmP89TxSYft2,iv:yCJXF76JIpfuJvdMub7e2aG5l0iLId+1fut6egPKSmA=,tag:HYva3S3wT9LWjizi//kVQg==,type:str]
+          message: ENC[AES256_GCM,data:ZVhmunL0ow2Ac1rArtw3vTyJI1UT18Dtca1MPlTt+LRLYAmH3L9ApCIb+H1CxXh7HDV+nKs=,iv:YX3/Sik4zG/Z79sTUeTFJ23gJuVDgB/4+ei1PBCgfK0=,tag:yo5enuHY3aaX7NBr9r5fnw==,type:str]
+    - id: ENC[AES256_GCM,data:+0juYjykku48ElY8xQ==,iv:Q5nBIXz1Y9ndNtLvhNtH5boMsFYLGL0EB3UD8ir+UtA=,tag:nhq5+dcENymDha6xuqV4jQ==,type:str]
+      name: ENC[AES256_GCM,data:CsWtidPskAlcWCUiQrqBi5rbXMQZ,iv:BmPkUC2Mhx4PDnf/Qz0/zI3lV1nmdaDR4hUaZJVlEWE=,tag:9V+zGf/Acf6TvCRrco3WLA==,type:str]
+      description: ENC[AES256_GCM,data:H/keuh2+sTdTQ5XcGD3yjQ==,iv:FEho5f/fvR7cTiVnGjYBUplsHqhZj5v7fZKgZoBcXXY=,tag:nqQY16qfRjCTH27SAggIbg==,type:str]
       mysql:
-        - host: ENC[AES256_GCM,data:+BXzQnupg2EpAcdvr1/Y,iv:3pj/lD8Ik99+tvx0dFMk0gFnJA/A8Whuh801go1V16s=,tag:ZcTALCcse9QgszPxI2GZFg==,type:str]
-          port: ENC[AES256_GCM,data:4VdU3A==,iv:teT4aAR1kws76itIQbyhQi4JEnuooqpm3uopdrVIZLk=,tag:MbrAfBLGcsZ7PeOsCQmK8Q==,type:int]
-          database: ENC[AES256_GCM,data:6Z1Dw+w=,iv:zke4nLPzrVJCV/eOm1fYQEEzXnn7kxONa2Zl7He12YY=,tag:nFM5MLQYrJFxMryXRQny/g==,type:str]
-          username: ENC[AES256_GCM,data:Q4f6Pciszg==,iv:ssscDXUDEtkiqhbRRTWJLf9ubEJMhu8lKSNTOges94E=,tag:nEy7nQ/tZ6zFZZfa3zDWxA==,type:str]
-          password: ENC[AES256_GCM,data:GOMrEsEfqpv55YEL,iv:airm81M4DzvdvO5YDV40uW7CSJlBxcdVLGONhdybUpc=,tag:cyVWzQcc2l0sh40ajsLJ+g==,type:str]
+        - host: ENC[AES256_GCM,data:7mzAqRkSkn/AUfXuTJ3g,iv:KEozJzB3EYmeZiYAWzHggxchnfFEcnLzgW7jV+kbgGU=,tag:9p2XXmZg7y8+V3hRDaoW8w==,type:str]
+          port: ENC[AES256_GCM,data:i6UOXw==,iv:nn/S6ZyBJY+aYifvweE/Bk4nM8/X9YhI9MyAM+X3nFA=,tag:GT2HKo4aE6daQuxz/0aSBg==,type:int]
+          database: ENC[AES256_GCM,data:uS6T/yw=,iv:oHIpeQosrjtx0S3Ok67uW8tjw4NqsFcU0AXZu1icybc=,tag:P2MJPFzM5dHSF+xmhd2jFA==,type:str]
+          username: ENC[AES256_GCM,data:0JLFFJFbJQ==,iv:s6T61L4pdq1wxr+q+brVAdOLpMx1zkJFlk+9YUitqRY=,tag:wNj6r3eyRHEmaUtPVE2UBw==,type:str]
+          password: ENC[AES256_GCM,data:acqqPA6UBjrN9tzj,iv:3AGRBajlJ+Jj70i4AOSkQiAAsIWeT12LIsuUZO+Y2Hg=,tag:1Tb/smuwvyjHZa9/4zVcDA==,type:str]
 sops:
     kms: []
     gcp_kms: []
@@ -53,14 +54,14 @@ sops:
         - recipient: age1hhnjylnwfh0w6sxzlvc905ma8wa5pkspv9k2kj8a0d993m8h734se3jh7u
           enc: |
             -----BEGIN AGE ENCRYPTED FILE-----
-            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA3MDFTMmQvR21sTmxIaHJh
-            VlpVVk5zbFpRQ1RBNm5SaXVyVkJQSjJFV0c0CmR1S0xpMnFmdTcvVi9vbWxvNW15
-            RW5vSkxHVHN6ZGFRNFhZWlI2QVNaaE0KLS0tIEdPcTB6MDJ0eUV6Wk50SXZWYzE3
-            dFhUdHdFRkJzc2I5VGxOQ01NSy9kQU0K+aVdG5uFWdMbe3wC+fhkagFlVJyw0iwu
-            zFXpuM1hOf83R+O3C1yVjLhn6GJiW3ORfmUev6uqgQlpau0RLPZORw==
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAzTVV6TXQ1UkhUYXVxQ1VG
+            dXpDWjdxckQ2S3pibnZUTklMWDlOWDNPNmdBCkt0R1p1b0NBVSt5bTBnWEVyV1V5
+            am9YWGtYRmp0WjRyd25XMHZPdzJWSmsKLS0tIFAzY2p6bkd0dUxKbkJkamM3NGNr
+            MFFFbDVuZGViNVNQSDYrVk9BUStSY0kKKW44ps1eN+vH1/iORJILOP45E+O7F90b
+            J0C5TvjHlQANkHLNmVFh9PEktm/DhFP/Ah6xprhgOXvUoDoOUiF5Hg==
             -----END AGE ENCRYPTED FILE-----
-    lastmodified: "2023-12-08T04:55:36Z"
-    mac: ENC[AES256_GCM,data:sWR7tAAAU4nRy7RZj36ADJP6w2SPSzLb0Gf7jB17m6TzyEHyaI+c5Jurw6ThZbpH8wz1Kslu4WyrRq8gDi6Rymey5nWbVgb+NU6zKlXrbZXWeHt0FeeOAPlGxuDVKZ9f5F1CaZvvB7EGJb4uQkC+te9+oDchCmThXrcZgFwIBKI=,iv:YJkdXtUtQqHvSBv9B7tUbALB4jSRCdpd015h4fJ3rbs=,tag:MQP05Yu6lwXMB9+uHOa+Kg==,type:str]
+    lastmodified: "2024-05-16T14:15:49Z"
+    mac: ENC[AES256_GCM,data:0Qgk5hanYXa4Axe0vsWbx/n/ejCY7OgpsWe+J+I1zAXabZVtdRDUPEmOP5qe0IoQdq1D5eY5538EcH3mnHoh0ar2ACgWiQOppFbGhuvjAqLvJ9lAjRSndhSzy1NEmVX8H0NpdJ2WRkj5X5F6GFLNhd3ed1t49QONlbE6E0UiWKw=,iv:aO2EVZtWsxL28FRnoa+0Q4f3vWdHBnnOuU38z2efAWc=,tag:hDpMwTHyYwmLxDRV2Pxp+A==,type:str]
     pgp: []
-    encrypted_regex: ^(data|postgres|mysql)$
+    unencrypted_suffix: _unencrypted
     version: 3.8.1
