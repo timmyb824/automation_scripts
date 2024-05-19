@@ -1,35 +1,38 @@
 import calendar
+import logging
 import os
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 
 import boto3
 import requests
 from gotify import Gotify
 from rocketry import Rocketry
-from rocketry.conds import daily, every
-
-# import logging
-from slack_sdk import WebClient
+from rocketry.conds import every  # daily, hourly,
 
 app = Rocketry()
 
 DISCORD_WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
 HEALTHCHECKS_URL = os.environ["HEALTHCHECKS_URL_AWS_USAGE_COST"]
-SLACK_BOT_TOKEN = os.environ["SLACK_BOT_TOKEN"]
-THRESHOLD = 5
+THRESHOLD = 10
 GOTIFY = Gotify(
     base_url=os.environ["GOTIFY_HOST"],
     app_token=os.environ["GOTIFY_TOKEN_ADHOC_SCRIPTS"],
 )
+NTFY_TOPIC = os.environ["NTFY_TOPIC"]
+NTFY_ACCESS_TOKEN = os.environ["NTFY_ACCESS_TOKEN"]
+NTFY_URL = f"https://ntfy.timmybtech.com/{NTFY_TOPIC}"
 
-# logging.basicConfig(
-#     filename="app.log",
-#     level=logging.INFO,
-#     format="%(asctime)s %(levelname)s %(name)s %(message)s",
-# )
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s %(message)s",
+)
+
+logger = logging.getLogger(__name__)
 
 
 def get_current_costs() -> float:
+    """Get the current month's AWS costs."""
     client = boto3.client("ce", "us-east-1")  # AWS Cost Explorer client
 
     # Get the current date and the first day of the month
@@ -44,13 +47,14 @@ def get_current_costs() -> float:
             Metrics=["BlendedCost"],
         )
     except Exception as exception:
-        print(exception)
+        logger.error("Failed to retrieve AWS costs. Exception: %s", exception)
         return 0.0
 
     return response["ResultsByTime"][0]["Total"]["BlendedCost"]["Amount"]
 
 
-def get_end_of_month_projection(current_cost) -> tuple[float, float]:
+def get_end_of_month_projection(current_cost: float) -> tuple[float, float]:
+    """Get the projected end-of-month AWS costs and spending."""
     current_date = datetime.now().date()
     days_in_month = calendar.monthrange(current_date.year, current_date.month)[1]
     current_day_of_month = current_date.day
@@ -61,13 +65,8 @@ def get_end_of_month_projection(current_cost) -> tuple[float, float]:
     return projected_cost, projected_spending
 
 
-def send_slack_notification(message) -> dict:
-    client = WebClient(token=SLACK_BOT_TOKEN)
-
-    return client.chat_postMessage(channel="#alerts", text=message)
-
-
-def send_gotify_notification(message) -> dict:
+def send_gotify_notification(message: str) -> dict:
+    """Send a Gotify notification."""
     try:
         return GOTIFY.create_message(
             title="AWS Cost Alert",
@@ -76,7 +75,7 @@ def send_gotify_notification(message) -> dict:
             extras={"client::display": {"contentType": "text/markdown"}},
         )
     except Exception as exception:
-        print(exception)
+        logger.error(f"Failed to send Gotify notification. Exception: {exception}")
         return {}
 
 
@@ -91,7 +90,22 @@ def send_discord_notification(message) -> dict:
         response.raise_for_status()
         return {"ok": True, "status": response.status_code}
     except Exception as exception:
-        print(exception)
+        logger.error(f"Failed to send Discord notification. Exception: {exception}")
+        return {"ok": False, "status": "Failed"}
+
+
+def send_ntfy_notification(message) -> dict:
+    try:
+        response = requests.post(
+            NTFY_URL,
+            headers={"Authorization": f"Bearer {NTFY_ACCESS_TOKEN}"},
+            data=message,
+            timeout=15,
+        )
+        response.raise_for_status()
+        return {"ok": True, "status": response.status_code}
+    except Exception as exception:
+        logger.error(f"Failed to send Ntfy notification. Exception: {exception}")
         return {"ok": False, "status": "Failed"}
 
 
@@ -102,26 +116,31 @@ def check_threshold_exceeded(projected_cost: float) -> bool | None:
         # slack_response = send_slack_notification(message)
         discord_response = send_discord_notification(message)
         gotify_response = send_gotify_notification(message)
-        if discord_response["ok"] and gotify_response["id"]:
-            print("Discord and Gotify notifications sent successfully.\n")
+        ntfy_response = send_ntfy_notification(message)
+        if discord_response["ok"] and gotify_response["id"] and ntfy_response["ok"]:
+            logger.info("Discord, Gotify and Ntfy notifications sent successfully.\n")
             print("###############################################\n")
             return True
         elif discord_response["ok"]:
-            print("Discord notification sent successfully.\n")
+            logger.info("Discord notification sent successfully.\n")
             print("###############################################\n")
             return True
         elif gotify_response["id"]:
-            print("Gotify notification sent successfully.\n")
+            logger.info("Gotify notification sent successfully.\n")
+            print("###############################################\n")
+            return True
+        elif ntfy_response["ok"]:
+            logger.info("Ntfy notification sent successfully.\n")
             print("###############################################\n")
             return True
         else:
-            print("Failed to send Slack and Gotify notifications.\n")
+            logger.error("Failed to send notifications.\n")
             return False
 
 
 # @app.task(daily.at("22:30"))
-@app.task(every("24 hours"))
-# @app.task(every("1 minutes"))
+# @app.task(every("24 hours"))
+@app.task(every("1 minutes"))
 def main():
     # logging.info('Script started successfully.')
     current_cost = get_current_costs()
@@ -138,7 +157,7 @@ def main():
     try:
         requests.get(HEALTHCHECKS_URL, timeout=10)
     except requests.RequestException as re:
-        print(f"Failed to send health check signal. Exception: {re}\n")
+        logger.error(f"Failed to send health check signal. Exception: {re}\n")
     return
 
 
