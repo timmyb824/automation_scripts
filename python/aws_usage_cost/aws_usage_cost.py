@@ -21,7 +21,9 @@ GOTIFY = Gotify(
 NTFY_TOPIC = os.environ["NTFY_TOPIC"]
 NTFY_ACCESS_TOKEN = os.environ["NTFY_ACCESS_TOKEN"]
 NTFY_URL = f"https://ntfy.timmybtech.com/{NTFY_TOPIC}"
-
+INTERVAL_MINS = 1
+AWS_ACCESS_KEY = os.environ["AWS_CLIENT_ID"]
+AWS_SCERET_KEY = os.environ["AWS_SCERET_KEY"]
 
 logging.basicConfig(
     level=logging.INFO,
@@ -33,7 +35,13 @@ logger = logging.getLogger(__name__)
 
 def get_current_costs() -> float:
     """Get the current month's AWS costs."""
-    client = boto3.client("ce", "us-east-1")  # AWS Cost Explorer client
+
+    client = boto3.client(
+        "ce",
+        "us-east-1",
+        aws_access_key_id=AWS_ACCESS_KEY,
+        aws_secret_access_key=AWS_SCERET_KEY,
+    )  # AWS Cost Explorer client
 
     # Get the current date and the first day of the month
     end = datetime.now(timezone.utc).date()
@@ -140,7 +148,7 @@ def check_threshold_exceeded(projected_cost: float) -> bool | None:
 
 # @app.task(daily.at("22:30"))
 # @app.task(every("24 hours"))
-@app.task(every("1 minutes"))
+@app.task(every(INTERVAL_MINS, "minutes"))
 def main():
     # logging.info('Script started successfully.')
     current_cost = get_current_costs()
@@ -158,7 +166,6 @@ def main():
         requests.get(HEALTHCHECKS_URL, timeout=10)
     except requests.RequestException as re:
         logger.error(f"Failed to send health check signal. Exception: {re}\n")
-    return
 
 
 if __name__ == "__main__":
