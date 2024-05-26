@@ -21,7 +21,7 @@ GOTIFY = Gotify(
 NTFY_TOPIC = os.environ["NTFY_TOPIC"]
 NTFY_ACCESS_TOKEN = os.environ["NTFY_ACCESS_TOKEN"]
 NTFY_URL = f"https://ntfy.timmybtech.com/{NTFY_TOPIC}"
-INTERVAL_MINS = 1
+INTERVAL_MINS = 60
 AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
 AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
 
