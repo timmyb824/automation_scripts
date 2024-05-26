@@ -13,7 +13,7 @@ app = Rocketry()
 
 DISCORD_WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
 HEALTHCHECKS_URL = os.environ["HEALTHCHECKS_URL_AWS_USAGE_COST"]
-THRESHOLD = 10
+THRESHOLD = os.environ["THRESHOLD"]
 GOTIFY = Gotify(
     base_url=os.environ["GOTIFY_HOST"],
     app_token=os.environ["GOTIFY_TOKEN_ADHOC_SCRIPTS"],
