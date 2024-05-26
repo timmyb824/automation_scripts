@@ -13,6 +13,7 @@ services:
       - HEALTHCHECKS_URL_OCI_USAGE_COST=${HEALTHCHECKS_URL_OCI_USAGE_COST}
       - GOTIFY_HOST=${GOTIFY_HOST}
       - GOTIFY_TOKEN_ADHOC_SCRIPTS=${GOTIFY_TOKEN_ADHOC_SCRIPTS}
+      - THRESHOLD=5
     volumes:
       - './config:/scripts/config'
       - './oci.pem:/scripts/oci.pem'
