@@ -1,20 +1,6 @@
-{
-	"data": "ENC[AES256_GCM,data:9sCZP5xZzzZ9oqmsVEnSVaEtQm59bpsCjotvDXclqW8txVI4Hhg3WjTbtVRv/yqVa7REh2vWa+lz4zpbJquHu18pBamylG7jz43Jc6mc0xODPtx0pfMh4uTT8D3w2GHKa9S6jbOIVnD/ZIKIxwb8g7itAexOQAB7DhVNfP/kIyrRQxAGG1SnDI8FDe5XEK/E79OUUhqeqBIWwSaOjlXtkVk6G97J5Lm85mHAm7jxP8J5v6KCl+u48pfhsp7FXSp/KS9KCST1d1LStMnkccJTrH74lvycAxsbzGaQSA1DUKIAd6RREMOQj8wIUiaOXV1PrL+2HmXxOj1LcXZZnkja9lPXJecauntP55TxSQ16KqzLp2xFuQ2J5Sa59w8Tt6wd6BhJ4rwlMWs9BSL4e+gDOGLG3L3O7wQ=,iv:v19PZPBHl4Upfmnx5u/XVC/aC/mT4up0/83KHc1DajU=,tag:vBze5P0ui6RckmxsAqrUrg==,type:str]",
-	"sops": {
-		"kms": null,
-		"gcp_kms": null,
-		"azure_kv": null,
-		"hc_vault": null,
-		"age": [
-			{
-				"recipient": "age1hhnjylnwfh0w6sxzlvc905ma8wa5pkspv9k2kj8a0d993m8h734se3jh7u",
-				"enc": "-----BEGIN AGE ENCRYPTED FILE-----\nYWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSB3Uno3SGZjcGdPOUJJOUZH\naGk3RW90dTVLUnNLWHNIcnlQQVkvaGc4UDFjCld4ZVhoLzkzUGhoeUE2TG1IcSs5\nVEh3cktza3dCcmtGQWJJYXd3dlBtTXMKLS0tIFUzaXVwMWUrdTUrN1ltSGZsdmI0\nRld3Wlp0L0RlaXdTUVZCUnc4ZURZQ3cKIvKeZQ4Vi1po4kKMyq423QD/z18lN08M\nb7Yh4xyAKHD/M8IxQCUY9IPs1A2KEZwQ18IkJ4ZB4HMorGdvyKlomw==\n-----END AGE ENCRYPTED FILE-----\n"
-			}
-		],
-		"lastmodified": "2024-05-25T18:16:34Z",
-		"mac": "ENC[AES256_GCM,data:h8O9QCFec2MAuvYipE1jnJRWlOHOIqeVl3FZByu6A8inJNqxCL2Lbqn/S01+bXVSyqNiMoLlIQab9PSemwFmOTk1IZmgWuDgZMPpe0qzFZyw2w0xFRASMSLDIKd2GLQIw4DKhIqaAYacFs74QTttTYvfdtNMv6pF4Ks8xY0qFC4=,iv:iGKbLrSpzs+vYSxxpxskUzBWno0U2ZGa+p5TaH+BFsI=,tag:jBGpOWcpluhM0XL8mjnPFQ==,type:str]",
-		"pgp": null,
-		"unencrypted_suffix": "_unencrypted",
-		"version": "3.8.1"
-	}
-}
+[DEFAULT]
+user=ocid1.user.oc1..aaaaaaaautzgpruizymxu3bji6ffe42qlrqbndlxyh5ij5ogfubgmsyivuua
+fingerprint=8c:9b:e0:b1:0c:fd:60:19:ec:9a:c0:f3:00:7d:a9:3f
+tenancy=ocid1.tenancy.oc1..aaaaaaaaza3mtmk4bku43nark74hc2rett36jdn346zssfiyy4fsdlxcej4q
+region=us-ashburn-1
+key_file=/scripts/oci.pem

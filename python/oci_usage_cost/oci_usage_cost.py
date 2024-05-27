@@ -20,7 +20,7 @@ app = Rocketry()
 
 DISCORD_WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
 HEALTHCHECKS_URL = os.environ["HEALTHCHECKS_URL_OCI_USAGE_COST"]
-THRESHOLD = os.environ["THRESHOLD"]
+THRESHOLD =float(os.environ["THRESHOLD"])
 GOTIFY = Gotify(
     base_url=os.environ["GOTIFY_HOST"],
     app_token=os.environ["GOTIFY_TOKEN_ADHOC_SCRIPTS"],
@@ -28,6 +28,7 @@ GOTIFY = Gotify(
 NTFY_TOPIC = os.environ["NTFY_TOPIC"]
 NTFY_ACCESS_TOKEN = os.environ["NTFY_ACCESS_TOKEN"]
 NTFY_URL = f"https://ntfy.timmybtech.com/{NTFY_TOPIC}"
+INTERVAL_MINS = os.environ["INTERVAL_MINS"]
 
 CONFIG_PATH = os.path.expanduser("~/.oci/config")
 if not os.path.exists(CONFIG_PATH):
@@ -183,7 +184,7 @@ def check_threshold_exceeded(total_computed_amount: float) -> bool:
 
 # @app.task(daily.at("22:30"))
 # @app.task(every("24 hours"))
-@app.task(every("60 seconds"))
+@app.task(every(f"{INTERVAL_MINS} minutes"))
 def main() -> None:
     # Get the total cost for this month
     (total_computed_amount, total_computed_quantity) = get_usage_totals()

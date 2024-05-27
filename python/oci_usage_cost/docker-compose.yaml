@@ -14,6 +14,7 @@ services:
       - GOTIFY_HOST=${GOTIFY_HOST}
       - GOTIFY_TOKEN_ADHOC_SCRIPTS=${GOTIFY_TOKEN_ADHOC_SCRIPTS}
       - THRESHOLD=5
+      - INTERVAL_MINS=60
     volumes:
       - './config:/scripts/config'
       - './oci.pem:/scripts/oci.pem'
