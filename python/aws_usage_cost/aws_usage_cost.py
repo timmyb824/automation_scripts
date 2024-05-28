@@ -21,7 +21,7 @@ GOTIFY = Gotify(
 NTFY_TOPIC = os.environ["NTFY_TOPIC"]
 NTFY_ACCESS_TOKEN = os.environ["NTFY_ACCESS_TOKEN"]
 NTFY_URL = f"https://ntfy.timmybtech.com/{NTFY_TOPIC}"
-INTERVAL_MINS = 60
+INTERVAL_SCHEDULE = os.environ["INTERVAL_SCHEDULE"]
 AWS_ACCESS_KEY_ID = os.environ["AWS_ACCESS_KEY_ID"]
 AWS_SECRET_ACCESS_KEY = os.environ["AWS_SECRET_ACCESS_KEY"]
 
@@ -148,7 +148,7 @@ def check_threshold_exceeded(projected_cost: float) -> bool | None:
 
 # @app.task(daily.at("22:30"))
 # @app.task(every("24 hours"))
-@app.task(every(f"{INTERVAL_MINS} minutes"))
+@app.task(every(f"{INTERVAL_SCHEDULE}"))
 def main():
     # logging.info('Script started successfully.')
     current_cost = get_current_costs()
