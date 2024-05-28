@@ -16,4 +16,5 @@ services:
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
       - THRESHOLD=5
+      - INTERVAL_SCHEDULE="1 hour"
     network_mode: host
