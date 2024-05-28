@@ -8,7 +8,7 @@ from email.message import EmailMessage
 
 import requests
 from rocketry import Rocketry
-from rocketry.conds import every  # daily, hourly,
+from rocketry.conds import daily #  hourly, every
 
 app = Rocketry()
 
@@ -31,7 +31,7 @@ EMAIL = os.environ.get("EMAIL")
 PASSWORD = os.environ.get("GOOGLE_APP_PASSWORD")
 PHONE_NUMBER = os.environ.get("PHONE_NUMBER")
 HEALTHCHECKS_URL = os.environ.get("HEALTHCHECKS_URL_BILLS_REMINDER_SMS")
-SCHEDULE_INTERVAL = os.environ.get("SCHEDULE_INTERVAL")
+#SCHEDULE_INTERVAL = os.environ.get("SCHEDULE_INTERVAL")
 
 
 def send_message(phone_number, carrier, subject, message):
@@ -64,9 +64,9 @@ def send_message(phone_number, carrier, subject, message):
         )
 
 
-# @app.task(daily.at("22:30"))
+@app.task(daily.at("19:00"))
 # @app.task(every("24 hours"))
-@app.task(every(f"{SCHEDULE_INTERVAL}"))
+# @app.task(every(f"{SCHEDULE_INTERVAL}"))
 def main():
     # List of bills with the day of the month they are due
     bills = {
