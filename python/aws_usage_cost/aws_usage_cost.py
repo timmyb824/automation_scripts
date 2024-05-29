@@ -93,7 +93,7 @@ def send_discord_notification(message) -> dict:
 
     try:
         response = requests.post(
-            DISCORD_WEBHOOK_URL, json=data, headers=headers, timeout=5
+            DISCORD_WEBHOOK_URL, json=data, headers=headers, timeout=15
         )
         response.raise_for_status()
         return {"ok": True, "status": response.status_code}
