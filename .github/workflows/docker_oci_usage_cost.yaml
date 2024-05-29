@@ -45,6 +45,11 @@ jobs:
         id: check_changes
         run: echo "has_changes=$(cat has_changes)" >> $GITHUB_ENV
 
+      - name: Debug
+        run: |
+          echo "DIFF=$DIFF"
+          echo "has_changes=$has_changes"
+
       - name: Login to Docker Hub
         if: env.has_changes == 'true'
         uses: docker/login-action@v3
