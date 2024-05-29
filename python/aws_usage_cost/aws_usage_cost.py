@@ -156,7 +156,7 @@ def main():
     if not check_threshold_exceeded(projected_cost):
         logger.info("No threshold exceeded.")
     try:
-        requests.get(HEALTHCHECKS_URL, timeout=10)
+        requests.get(HEALTHCHECKS_URL, timeout=15)
     except requests.RequestException as re:
         logger.exception(f"Failed to send health check signal. Exception: {re}")
 
