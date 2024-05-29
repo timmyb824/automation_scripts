@@ -5,7 +5,6 @@ from datetime import datetime, timezone
 
 import boto3
 import requests
-from gotify import Gotify
 from rocketry import Rocketry
 from rocketry.conds import every  # daily, hourly,
 
@@ -14,10 +13,8 @@ app = Rocketry()
 DISCORD_WEBHOOK_URL = os.environ["DISCORD_WEBHOOK_URL"]
 HEALTHCHECKS_URL = os.environ["HEALTHCHECKS_URL_AWS_USAGE_COST"]
 THRESHOLD = float(os.environ["THRESHOLD"])
-GOTIFY = Gotify(
-    base_url=os.environ["GOTIFY_HOST"],
-    app_token=os.environ["GOTIFY_TOKEN_ADHOC_SCRIPTS"],
-)
+GOTIFY_HOST = os.environ["GOTIFY_HOST"]
+GOTIFY_TOKEN = os.environ["GOTIFY_TOKEN_ADHOC_SCRIPTS"]
 NTFY_TOPIC = os.environ["NTFY_TOPIC"]
 NTFY_ACCESS_TOKEN = os.environ["NTFY_ACCESS_TOKEN"]
 NTFY_URL = f"https://ntfy.timmybtech.com/{NTFY_TOPIC}"
@@ -55,7 +52,7 @@ def get_current_costs() -> float:
             Metrics=["BlendedCost"],
         )
     except Exception as exception:
-        logger.error("Failed to retrieve AWS costs. Exception: %s", exception)
+        logger.exception(f"Failed to retrieve AWS costs. Exception: {exception}")
         return 0.0
 
     return response["ResultsByTime"][0]["Total"]["BlendedCost"]["Amount"]
@@ -73,21 +70,23 @@ def get_end_of_month_projection(current_cost: float) -> tuple[float, float]:
     return projected_cost, projected_spending
 
 
-def send_gotify_notification(message: str) -> dict:
-    """Send a Gotify notification."""
+def send_gotify_notification(message) -> dict:
+    """Send a notification using Gotify."""
     try:
-        return GOTIFY.create_message(
-            title="AWS Cost Alert",
-            message=message,
-            priority=5,
-            extras={"client::display": {"contentType": "text/markdown"}},
+        response = requests.post(
+            f"{GOTIFY_HOST}/message?token={GOTIFY_TOKEN}",
+            json={"message": message, "priority": 5},
+            timeout=15,
         )
+        response.raise_for_status()
+        return {"ok": True, "status": response.status_code}
     except Exception as exception:
-        logger.error(f"Failed to send Gotify notification. Exception: {exception}")
-        return {}
+        logger.exception(f"Failed to send Gotify notification. Exception: {exception}")
+        return {"ok": False, "status": "Failed"}
 
 
 def send_discord_notification(message) -> dict:
+    """Send a notification using Discord."""
     data = {"content": message}
     headers = {"Content-Type": "application/json"}
 
@@ -98,11 +97,12 @@ def send_discord_notification(message) -> dict:
         response.raise_for_status()
         return {"ok": True, "status": response.status_code}
     except Exception as exception:
-        logger.error(f"Failed to send Discord notification. Exception: {exception}")
+        logger.exception(f"Failed to send Discord notification. Exception: {exception}")
         return {"ok": False, "status": "Failed"}
 
 
 def send_ntfy_notification(message) -> dict:
+    """Send a notification using Ntfy."""
     try:
         response = requests.post(
             NTFY_URL,
@@ -113,36 +113,28 @@ def send_ntfy_notification(message) -> dict:
         response.raise_for_status()
         return {"ok": True, "status": response.status_code}
     except Exception as exception:
-        logger.error(f"Failed to send Ntfy notification. Exception: {exception}")
+        logger.exception(f"Failed to send Ntfy notification. Exception: {exception}")
         return {"ok": False, "status": "Failed"}
 
 
 def check_threshold_exceeded(projected_cost: float) -> bool | None:
-    # sourcery skip: extract-duplicate-method, last-if-guard
+    """Check if the projected cost exceeds the threshold and send notifications."""
     if projected_cost > THRESHOLD:
         message = f"ATTENTION! Projected end-of-month AWS costs of {projected_cost:.2f} USD exceeds {THRESHOLD} USD!"
-        # slack_response = send_slack_notification(message)
         discord_response = send_discord_notification(message)
         gotify_response = send_gotify_notification(message)
         ntfy_response = send_ntfy_notification(message)
-        if discord_response["ok"] and gotify_response["id"] and ntfy_response["ok"]:
-            logger.info("Discord, Gotify and Ntfy notifications sent successfully.\n")
-            print("###############################################\n")
-            return True
-        elif discord_response["ok"]:
-            logger.info("Discord notification sent successfully.\n")
-            print("###############################################\n")
-            return True
-        elif gotify_response["id"]:
-            logger.info("Gotify notification sent successfully.\n")
-            print("###############################################\n")
-            return True
-        elif ntfy_response["ok"]:
-            logger.info("Ntfy notification sent successfully.\n")
-            print("###############################################\n")
+        if discord_response["ok"] and gotify_response["ok"] and ntfy_response["ok"]:
+            logger.info("Discord, Gotify, and Ntfy notifications sent successfully.")
             return True
         else:
-            logger.error("Failed to send notifications.\n")
+            if discord_response["ok"]:
+                logger.info("Discord notification sent successfully.")
+            if gotify_response["ok"]:
+                logger.info("Gotify notification sent successfully.")
+            if ntfy_response["ok"]:
+                logger.info("Ntfy notification sent successfully.")
+            logger.error("Failed to send notifications.")
             return False
 
 
@@ -150,22 +142,22 @@ def check_threshold_exceeded(projected_cost: float) -> bool | None:
 # @app.task(every("24 hours"))
 @app.task(every(f"{INTERVAL_SCHEDULE}"))
 def main():
+    """Run the main script."""
     # logging.info('Script started successfully.')
     current_cost = get_current_costs()
     projected_cost, projected_spending = get_end_of_month_projection(
         float(current_cost)
     )
-    print(f"Current date and time: {datetime.now()}")
-    print(f"Current month costs: {current_cost} USD")
-    print(f"Projected end-of-month costs: {projected_cost:.2f} USD")
-    print(f"Projected end-of-month spending: {projected_spending:.2f} USD")
+    logger.info(f"Current date and time: {datetime.now()}")
+    logger.info(f"Current month costs: {current_cost} USD")
+    logger.info(f"Projected end-of-month costs: {projected_cost:.2f} USD")
+    logger.info(f"Projected end-of-month spending: {projected_spending:.2f} USD")
     if not check_threshold_exceeded(projected_cost):
-        print("No threshold exceeded.\n")
-        print("###############################################\n")
+        logger.info("No threshold exceeded.")
     try:
         requests.get(HEALTHCHECKS_URL, timeout=10)
     except requests.RequestException as re:
-        logger.error(f"Failed to send health check signal. Exception: {re}\n")
+        logger.exception(f"Failed to send health check signal. Exception: {re}")
 
 
 if __name__ == "__main__":
