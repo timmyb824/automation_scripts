@@ -17,7 +17,7 @@ jobs:
     strategy:
       matrix:
         path:
-          - "python/aws_usage_cost"
+          - "python/aws-usage-cost"
           - "python/bills-reminder-sms"
           - "python/oci-usage-cost"
 
