@@ -48,7 +48,7 @@ jobs:
 
       - name: Test HAS_CHANGES
         if: steps.run-publish.outputs.HAS_CHANGES == 'yes'
-        run: echo "Changes detected"
+        run: echo "Changes were detected"
         shell: bash
 
       - name: Login to Docker Hub
