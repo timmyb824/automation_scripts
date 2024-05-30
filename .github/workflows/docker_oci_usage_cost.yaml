@@ -17,9 +17,9 @@ jobs:
     strategy:
       matrix:
         path:
-          - "python/aws-usage-cost"
-          - "python/bills-reminder-sms"
-          - "python/oci-usage-cost"
+          - "aws-usage-cost"
+          - "bills-reminder-sms"
+          - "oci-usage-cost"
 
     steps:
       - name: Pull git repo
@@ -34,28 +34,26 @@ jobs:
         run: |
           git fetch origin main
           DIFF=$(git diff --name-only origin/main HEAD)
-          if echo "$DIFF" | grep -q "${{ matrix.path }}"; then echo "true" > has_changes; else echo "false" > has_changes; fi
+          if echo "$DIFF" | grep -q "${{ matrix.path }}"; then echo "true" > HAS_CHANGES; else echo "false" > HAS_CHANGES; fi
+          echo "HAS_CHANGES=$(cat HAS_CHANGES)" >> "GITHUB_OUTPUT"
         shell: bash
 
-      - name: Check for changes
-        id: check_changes
-        run: echo "has_changes=$(cat has_changes)" >> $GITHUB_ENV
-
       - name: Login to Docker Hub
+        if: steps.changes.outputs.HAS_CHANGES == 'true'
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Login to Docker Hub
-        if: env.has_changes == 'true'
+        if: steps.changes.outputs.HAS_CHANGES == 'true'
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build and push
-        if: env.has_changes == 'true'
+        if: steps.changes.outputs.HAS_CHANGES == 'true'
         id: docker_build
         uses: docker/build-push-action@v5
         with:
@@ -67,5 +65,5 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
 
       - name: Image digest
-        if: env.has_changes == 'true'
+        if: steps.changes.outputs.HAS_CHANGES == 'true'
         run: echo ${{ steps.docker_build.outputs.digest }}
