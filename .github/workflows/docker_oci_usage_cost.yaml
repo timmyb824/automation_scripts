@@ -1,20 +1,16 @@
 name: Publish Docker Images
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "python/**"
   pull_request:
     branches:
       - main
     paths:
-      - "python/**"
+      - "python/aws_usage_cost/**"
+      - "python/bills_reminder_sms/**"
+      - "python/oci_usage_cost/**"
 
 jobs:
   Docker-Publish:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment:
       name: production
     runs-on: ubuntu-latest
@@ -33,32 +29,13 @@ jobs:
         id: buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Determine if the directory has changed
-        id: changes
-        run: |
-          git fetch origin main
-          DIFF=$(git diff --name-only origin/main HEAD)
-          if echo "$DIFF" | grep -q "${{ matrix.path }}"; then echo "true" > has_changes; else echo "false" > has_changes; fi
-        shell: bash
-
-      - name: Check for changes
-        id: check_changes
-        run: echo "has_changes=$(cat has_changes)" >> $GITHUB_ENV
-
-      - name: Debug
-        run: |
-          echo "DIFF=$DIFF"
-          echo "has_changes=$has_changes"
-
       - name: Login to Docker Hub
-        if: env.has_changes == 'true'
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build and push
-        if: env.has_changes == 'true'
         id: docker_build
         uses: docker/build-push-action@v5
         with:
@@ -70,5 +47,4 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
 
       - name: Image digest
-        if: env.has_changes == 'true'
         run: echo ${{ steps.docker_build.outputs.digest }}
