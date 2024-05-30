@@ -46,6 +46,11 @@ jobs:
         run: cat GITHUB_OUTPUT
         shell: bash
 
+      - name: Test HAS_CHANGES
+        if: steps.changes.outputs.HAS_CHANGES == true
+        run: echo "Changes detected"
+        shell: bash
+
       - name: Login to Docker Hub
         if: steps.changes.outputs.HAS_CHANGES == true
         uses: docker/login-action@v3
