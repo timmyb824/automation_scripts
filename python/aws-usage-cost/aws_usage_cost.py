@@ -32,6 +32,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+# adding comment to trigger ci
 def get_current_costs() -> float:
     """Get the current month's AWS costs."""
 
