@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-      - "python/aws_usage_cost/**"
-      - "python/bills_reminder_sms/**"
-      - "python/oci_usage_cost/**"
+      - "python/aws-usage-cost/**"
+      - "python/bills-reminder-sms/**"
+      - "python/oci-usage-cost/**"
 
 jobs:
   Docker-Publish:
@@ -17,9 +17,9 @@ jobs:
     strategy:
       matrix:
         path:
-          - "python/aws_usage_cost"
-          - "python/bills_reminder_sms"
-          - "python/oci_usage_cost"
+          - "aws-usage-cost"
+          - "bills-reminder-sms"
+          - "oci-usage-cost"
 
     steps:
       - name: Pull git repo
@@ -29,13 +29,44 @@ jobs:
         id: buildx
         uses: docker/setup-buildx-action@v3
 
+      - name: Determine if the directory has changed
+        id: run-publish
+        run: |
+          git fetch origin $GITHUB_BASE_REF
+          DIFF=$(git diff --name-only origin/$GITHUB_BASE_REF HEAD)
+          if echo "$DIFF" | grep -q "${{ matrix.path }}"; then
+            echo "yes" > HAS_CHANGES
+          else
+            echo "no" > HAS_CHANGES
+          fi
+          echo "HAS_CHANGES=$(cat HAS_CHANGES)" >> "GITHUB_OUTPUT"
+        shell: bash
+
+      - name: Debug
+        run: cat GITHUB_OUTPUT
+        shell: bash
+
+      - name: Test HAS_CHANGES
+        if: steps.run-publish.outputs.HAS_CHANGES == 'yes'
+        run: echo "Changes detected"
+        shell: bash
+
       - name: Login to Docker Hub
+        if: steps.run-publish.outputs.HAS_CHANGES == 'yes'
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+
+      - name: Login to Docker Hub
+        if: steps.run-publish.outputs.HAS_CHANGES == 'yes'
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
       - name: Build and push
+        if: steps.run-publish.outputs.HAS_CHANGES == 'yes'
         id: docker_build
         uses: docker/build-push-action@v5
         with:
@@ -47,4 +78,5 @@ jobs:
           cache-to: type=local,dest=/tmp/.buildx-cache
 
       - name: Image digest
+        if: steps.run-publish.outputs.HAS_CHANGES == 'yes'
         run: echo ${{ steps.docker_build.outputs.digest }}

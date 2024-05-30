@@ -8,7 +8,7 @@ from email.message import EmailMessage
 
 import requests
 from rocketry import Rocketry
-from rocketry.conds import daily #  hourly, every
+from rocketry.conds import daily  # hourly, every
 
 app = Rocketry()
 
@@ -31,7 +31,7 @@ EMAIL = os.environ.get("EMAIL")
 PASSWORD = os.environ.get("GOOGLE_APP_PASSWORD")
 PHONE_NUMBER = os.environ.get("PHONE_NUMBER")
 HEALTHCHECKS_URL = os.environ.get("HEALTHCHECKS_URL_BILLS_REMINDER_SMS")
-#SCHEDULE_INTERVAL = os.environ.get("SCHEDULE_INTERVAL")
+# SCHEDULE_INTERVAL = os.environ.get("SCHEDULE_INTERVAL")
 
 
 def send_message(phone_number, carrier, subject, message):

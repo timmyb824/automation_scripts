@@ -1,3 +1,4 @@
+# pylint: disable=logging-fstring-interpolation
 import calendar
 import logging
 import os
@@ -77,7 +78,7 @@ def send_gotify_notification(message) -> dict:
         response = requests.post(
             f"{GOTIFY_HOST}/message?token={GOTIFY_TOKEN}",
             json={"message": message, "priority": 5},
-            timeout=15,
+            timeout=10,
         )
         response.raise_for_status()
         return {"ok": True, "status": response.status_code}
@@ -109,7 +110,7 @@ def send_ntfy_notification(message) -> dict:
             NTFY_URL,
             headers={"Authorization": f"Bearer {NTFY_ACCESS_TOKEN}"},
             data=message,
-            timeout=15,
+            timeout=10,
         )
         response.raise_for_status()
         return {"ok": True, "status": response.status_code}
@@ -120,23 +121,24 @@ def send_ntfy_notification(message) -> dict:
 
 def check_threshold_exceeded(projected_cost: float) -> bool | None:
     """Check if the projected cost exceeds the threshold and send notifications."""
-    if projected_cost > THRESHOLD:
-        message = f"ATTENTION! Projected end-of-month AWS costs of {projected_cost:.2f} USD exceeds {THRESHOLD} USD!"
-        discord_response = send_discord_notification(message)
-        gotify_response = send_gotify_notification(message)
-        ntfy_response = send_ntfy_notification(message)
-        if discord_response["ok"] and gotify_response["ok"] and ntfy_response["ok"]:
-            logger.info("Discord, Gotify, and Ntfy notifications sent successfully.")
-            return True
-        else:
-            if discord_response["ok"]:
-                logger.info("Discord notification sent successfully.")
-            if gotify_response["ok"]:
-                logger.info("Gotify notification sent successfully.")
-            if ntfy_response["ok"]:
-                logger.info("Ntfy notification sent successfully.")
-            logger.error("Failed to send notifications.")
-            return False
+    if projected_cost <= THRESHOLD:
+        return
+    message = f"ATTENTION! Projected end-of-month AWS costs of {projected_cost:.2f} USD exceeds {THRESHOLD} USD!"
+    discord_response = send_discord_notification(message)
+    gotify_response = send_gotify_notification(message)
+    ntfy_response = send_ntfy_notification(message)
+    if discord_response["ok"] and gotify_response["ok"] and ntfy_response["ok"]:
+        logger.info("Discord, Gotify, and Ntfy notifications sent successfully.")
+        return True
+    else:
+        if discord_response["ok"]:
+            logger.info("Discord notification sent successfully.")
+        if gotify_response["ok"]:
+            logger.info("Gotify notification sent successfully.")
+        if ntfy_response["ok"]:
+            logger.info("Ntfy notification sent successfully.")
+        logger.error("Failed to send notifications.")
+        return False
 
 
 # @app.task(daily.at("22:30"))
@@ -156,7 +158,7 @@ def main():
     if not check_threshold_exceeded(projected_cost):
         logger.info("No threshold exceeded.")
     try:
-        requests.get(HEALTHCHECKS_URL, timeout=15)
+        requests.get(HEALTHCHECKS_URL, timeout=10)
     except requests.RequestException as re:
         logger.exception(f"Failed to send health check signal. Exception: {re}")
 
