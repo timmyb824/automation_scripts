@@ -43,7 +43,7 @@ jobs:
         shell: bash
 
       - name: Debug
-        run: cat GITHUB_OUTPUT
+        run: cat ${{ steps.run-publish.outputs.HAS_CHANGES}}
         shell: bash
 
       - name: Test HAS_CHANGES
