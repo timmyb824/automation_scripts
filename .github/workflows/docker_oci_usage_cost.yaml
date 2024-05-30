@@ -70,7 +70,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v5
         with:
-          context: ${{ matrix.path }}
+          context: python/${{ matrix.path }}
           builder: ${{ steps.buildx.outputs.name }}
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ matrix.path }}:latest
