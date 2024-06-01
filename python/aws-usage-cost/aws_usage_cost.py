@@ -32,7 +32,6 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-# adding comment to trigger ci
 def get_current_costs() -> float:
     """Get the current month's AWS costs."""
 
@@ -47,7 +46,7 @@ def get_current_costs() -> float:
     end = datetime.now(timezone.utc).date()
     start = datetime(end.year, end.month, 1).date()
 
-    # Ensure start date is before end date
+    # Ensure start date is before end date or it will throw an exception
     if start >= end:
         end = end - timedelta(days=1)
 
