@@ -2,7 +2,7 @@
 import calendar
 import logging
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import boto3
 import requests
@@ -46,6 +46,10 @@ def get_current_costs() -> float:
     # Get the current date and the first day of the month
     end = datetime.now(timezone.utc).date()
     start = datetime(end.year, end.month, 1).date()
+
+    # Ensure start date is before end date
+    if start >= end:
+        end = end - timedelta(days=1)
 
     try:
         # Retrieve the cost and usage data
