@@ -61,7 +61,7 @@ def send_message(phone_number, carrier, subject, message):
         )
 
 
-@app.task(daily.at("22:00"))
+@app.task(daily.at("23:00"))
 # @app.task(every("24 hours"))
 # @app.task(every(f"{SCHEDULE_INTERVAL}"))
 def main():
