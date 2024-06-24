@@ -24,7 +24,7 @@ done
 
 if [ -z $CONFIG_FILE_PATH ] ; then
         SCRIPTPATH=$(cd ${0%/*} && pwd -P)
-        CONFIG_FILE_PATH="${SCRIPTPATH}/pg_backup.config"
+        CONFIG_FILE_PATH="${SCRIPTPATH}/pg_backup.live.config"
 fi
 
 if [ ! -r ${CONFIG_FILE_PATH} ] ; then
@@ -205,7 +205,7 @@ fi
 # Copy backups to the NAS
 echo -e "\nCopying backups to the NAS"
 echo -e "--------------------------------------------\n"
-if ! sudo rsync -az --progress $FINAL_BACKUP_DIR $NAS_DIR; then
+if ! rsync -az --progress $FINAL_BACKUP_DIR $NAS_DIR; then
     echo "[!!ERROR!!] Failed to copy backups to the NAS" 1>&2
 else
     echo "Backups successfully copied to the NAS"
