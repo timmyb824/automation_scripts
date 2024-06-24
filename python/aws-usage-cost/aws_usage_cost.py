@@ -48,7 +48,7 @@ def get_current_costs() -> float:
 
     # Ensure start date is before end date or it will throw an exception
     if start >= end:
-        end = end - timedelta(days=1)
+        end = end + timedelta(days=1)
 
     try:
         # Retrieve the cost and usage data
