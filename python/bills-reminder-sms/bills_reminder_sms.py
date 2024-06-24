@@ -1,7 +1,5 @@
 import logging
 import os
-
-# import sys
 import smtplib
 from datetime import datetime, timedelta
 from email.message import EmailMessage

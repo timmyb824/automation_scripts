@@ -33,7 +33,7 @@ jobs:
         id: changes-detected
         run: |
           git fetch origin $GITHUB_BASE_REF
-          DIFF=$(git diff --name-only origin/$GITHUB_BASE_REF HEAD)
+          DIFF=$(git diff --name-only origin/$GITHUB_BASE_REF main)
           if echo "$DIFF" | grep -q "${{ matrix.path }}"; then
             echo "yes" > HAS_CHANGES
           else
